@@ -69,3 +69,17 @@ Atualizado 2026-10-10. `[x]` significa validação local documentada em etapa an
 - [ ] Executar deploy de preview no projeto oficial mantendo SSO.
 - [ ] Validar HTTP 401, 429, cookies, mobile, menu, Whatsapp, segurança, fotos e acesso direto.
 - [ ] Após QA e aprovação, mudar proteção SSO para tela privada e conferir anonimamente.
+
+
+## Checklist V3.6 — funcionalidades educativas sem dados de cliente
+- [x] UX-007: Implementar guia Por onde começar? por 7 situações; não pedir dados/arquivos pessoais. Teste estático.
+- [x] CONT-004: Tornar pesquisáveis as 18 perguntas frequentes existentes sem enviar termos.
+- [x] CONT-005: Acrescentar formato de conteúdo como filtro mantendo pesquisa e área da biblioteca.
+- [x] SOC-003: Complementar antifraude com 4 roteiros sem prometer verificação ou coleta de provas.
+- [x] UX-008: CSS isolado responsivo, foco, redução de movimento e impressão; implementação, não certificação WCAG.
+- [x] QA-001: Rodar 33 testes Node, checar 38 HTML, 1.829 refs locais, 1.251 âncoras e preservar SHA das imagens.
+- [ ] Validar todo fluxo, links, busca, CSS, teclado, leitura assistiva e dispositivo móvel no navegador.
+- [ ] Validar a V3.5 em Netlify oficial com SSO ativo, duas Edge Functions, rate limit e URLs diretas bloqueadas.
+- [ ] Revisão OAB/LGPD, direitos de mídia e 12 conteúdos do Instagram pelo profissional.
+- [ ] Aprovação e merge sequencial PR #2 → PR #3 → PR #6; registro de commit e rollback; NÃO alterar Netlify oficial até homologação.
+Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar reativação automática só porque o checklist V3.2 antigo dizia DEP-004 P0.

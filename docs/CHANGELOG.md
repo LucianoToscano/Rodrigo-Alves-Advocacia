@@ -47,3 +47,12 @@ Antes de relacionar a commits reais, obter SHAs e validar comparações.
 
 ## V3.4 — 10/10/2026 — portal privado em revisão
 Criadas Netlify Edge Functions (guarda geral, login limitado, sessão HMAC) e JS público apenas para mostrar/ocultar senha. site.js/site.css adicionam Encerrar acesso. Mantidas 37 páginas e 3 fotografias. Testes locais 20/20. GitHub PR #3 draft; sem deploy, sem merge, sem retirada do SSO.
+
+
+## V3.6 — experiência guiada e segurança educativa (2026-10-10)
+- Nova rota estática site/orientacao/index.html com sete tópicos e links para material existente.
+- Teaser na homepage e navegação por Comece aqui, sem inserir itens adicionais no menu principal.
+- Filtro por palavra nas 18 perguntas frequentes, via assets/js/faq-v36.js, sem rede ou retenção.
+- Biblioteca: filtro por formato de conteúdo e orientação contextual. Página de ferramentas e Central de Segurança atualizadas com atalhos/roteiros.
+- CSS novo assets/css/orientacao-v36.css e JS assets/js/orientacao-v36.js; testes tests/test-v36.mjs. Teste V3.5 ajustado para reconhecer explicitamente a 38ª página.
+- Fotografia, logomarca, autenticação Netlify e infraestrutura da V3.5 preservadas. PR #6 draft, sem merge/deploy. QA local 33/33 aprovado; homologação visual real pendente.
