@@ -455,3 +455,13 @@ As demandas `SEC-006` (Área do Cliente), `SEC-004` + `SEC-005` (cobranças e do
 | DEP-003 | **Homologação pendente** | Deploy demo `6aca2f8346e0a16fb3c6a76d` ready/manual, não comprovado como V3.3. |
 | QA-001 | Auditoria estática concluída | 37 HTML, 1.748 referências locais válidas, nove JS com sintaxe correta, sem IDs duplicados. Chromium bloqueado; testar no Work. |
 | QA-002 | Preservação fotográfica confirmada | Três retratos institucionais idênticos aos da V3.2. |
+
+
+## Portal privado V3.4 — acompanhamento
+| ID | Situação | Evidência/pendência |
+| --- | --- | --- |
+| SEC-011 | Implementado em branch, testes locais | Guard server-side de todas as URLs; homologar no Netlify real. |
+| SEC-012 | Implementado em branch, testes locais | Cookie 12h HMAC e logout; validar em mobile e rede. |
+| SEC-013 | Configurado, não validado em deploy | Rate limit 5 tentativas por 60s, IP/domínio; confirmar 429 real. |
+| DEP-006 | Pendente | Usar projeto Netlify oficial, configurar segredos via painel, deploy privado com SSO ativo, testar antes de modificar visibilidade. |
+| DOC-007 | Parcial | PR #3 + manual técnico + testes; atualizar registro pós-deploy. |

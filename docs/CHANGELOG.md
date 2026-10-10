@@ -43,3 +43,7 @@ Antes de relacionar a commits reais, obter SHAs e validar comparações.
 - 72 arquivos descompactados e sincronizados no diretório `site/` da branch `chore/recuperacao-v33-20261010`, incluindo 9 WebP preservadas.
 - Árvores Git local/remota idênticas: `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2`.
 - Pacote original preservado em `source/` e projeto `institucional-selos/` segregado. Sem merge, sem novo deploy, sem alteração SSO.
+
+
+## V3.4 — 10/10/2026 — portal privado em revisão
+Criadas Netlify Edge Functions (guarda geral, login limitado, sessão HMAC) e JS público apenas para mostrar/ocultar senha. site.js/site.css adicionam Encerrar acesso. Mantidas 37 páginas e 3 fotografias. Testes locais 20/20. GitHub PR #3 draft; sem deploy, sem merge, sem retirada do SSO.

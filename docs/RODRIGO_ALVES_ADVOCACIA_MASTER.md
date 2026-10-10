@@ -53,3 +53,7 @@ Pull Request de documentação **parcial**: https://github.com/LucianoToscano/ro
 - Três fotografias aprovadas intactas, com SHA-256 idêntico à V3.2.
 - `main` GitHub e PR #1 preservados. Netlify oficial/demo sem modificações, protegidos por SSO; V3.3 não homologada visualmente na hospedagem.
 - Chromium deste ambiente bloqueou navegação com `ERR_BLOCKED_BY_ADMINISTRATOR`; testes visuais/móveis/cliques aguardam navegador autorizado.
+
+
+## Portal privado V3.4 — 10/10/2026
+Implementado apenas na branch feat/portal-privado-institucional-v34 e PR #3 draft. Base V3.3 preservada (37 HTML, fotografias originais). Edge Functions com login no servidor, sessão 12h, cookie seguro e logout. 20 testes locais aprovados. O Netlify oficial continua com SSO; deploy atual 6aca07e0e41b1e712c726fc0 tem só 1 asset, sem Edge Functions. Senha e chave ainda não configuradas na Netlify; publicação pendente. Manual docs/PORTAL_PRIVADO_IMPLEMENTACAO_V34.md.
