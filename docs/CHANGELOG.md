@@ -66,3 +66,6 @@ Criadas Netlify Edge Functions (guarda geral, login limitado, sessão HMAC) e JS
 
 ## AVR-001 — 10/10/2026 — Assistente Rodrigo na branch de revisão
 Sete poses do desenho enviado, painel de navegação por Previdência, BPC, Saúde, Golpes e Contato, CSS/JS progressivos e testes estáticos. Sem IA, coleta pessoal, merge ou deploy. QA visual bloqueado no navegador de desenvolvimento, aguardando homologação. Ver `ASSISTENTE_VIRTUAL_RODRIGO_V1.md`.
+
+## AVR-001 V2 — 10/10/2026 (branch de revisão)
+Alterado assistente V1 para V2 com 10 poses individuais com transparência, alternância autônoma de expressões, passos curtos em desktop, balanço corporal discreto e controle de pausa. Mantidos menus de informação e política sem coleta. Criados `tests/test-assistente-v2.mjs` e documentação V2. Testes Node passaram; homologação visual pendente. **Não publicado**.

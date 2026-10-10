@@ -85,3 +85,7 @@ As imagens de vídeo de 2025 com a identificação visual de outro perfil (alves
 
 ## AVR-001 — Assistente Rodrigo ilustrado (10/10/2026)
 Implementação experimental na branch `feat/assistente-rodrigo-animado-v1`, sem publicação. Sete poses derivadas de ilustração fornecida, orientador local com cinco temas e links internos. Não utiliza IA, backend ou coleta. Respeita movimento reduzido e botão de pausa. Necessário homologar visual, acessibilidade, conteúdo e aprovação editorial antes de mesclar. Ver `docs/ASSISTENTE_VIRTUAL_RODRIGO_V1.md`.
+
+
+### AVR-001 — Atualização V2 (10/10/2026)
+Assistente ilustrado autônomo com **10 poses reais da última montagem fornecida**, fundo transparente WebP, animação CSS/JS com respiração, transições entre expressões e caminhadas curtas apenas no desktop. Integração em branch de revisão, sem IA, coleta de dados, merge ou publicação. Testes estáticos Node 3/3; testes reais em navegador bloqueados por `ERR_BLOCKED_BY_ADMINISTRATOR`. Consulte `docs/ASSISTENTE_VIRTUAL_RODRIGO_V2.md`.

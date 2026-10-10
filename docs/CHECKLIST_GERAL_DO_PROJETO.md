@@ -128,3 +128,11 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [x] Preparar orientação educativa, redução de movimento, pausa e tecla Escape.
 - [ ] Executar QA real em mobile e desktop, leitores de tela e sobreposição de componentes.
 - [ ] Aprovar editorial e uso institucional das poses; revisar PR antes de merge/deploy.
+
+### AVR-001 V2 — Movimento automático
+- [x] Recortar dez poses reais do último material existente, sem solicitar nem gerar novas imagens.
+- [x] Criar loop autônomo de expressões e pequenas caminhadas, respeitando movimento reduzido e pausa voluntária.
+- [x] Executar verificações estáticas e testes Node V2 (3/3).
+- [ ] Homologar movimento fluido sem tremores em navegadores e celulares reais.
+- [ ] Revisar possíveis sobreposições com WhatsApp, banner de consentimento e saída do portal.
+- [ ] Aprovar uso institucional das ilustrações e dos textos antes de merge/deploy.

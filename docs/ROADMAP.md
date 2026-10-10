@@ -47,3 +47,6 @@ Próximo P0: validação Netlify Edge/SSO, todas URLs antigas, segurança de ses
 
 ### AVR-001 — Assistente Rodrigo (P1)
 Fase 1: versão ilustrada e guiada em branch isolada (implementada, sem deploy). Fase 2: homologação visual, acessibilidade, aprovação e deploy autorizado. Fase 3 opcional: inteligência conversacional e voz, somente após arquitetura segura/LGPD e avaliação jurídica; não integra a V1.
+
+### AVR-001 V2 — Próxima homologação
+V2 preparada com 10 imagens e movimento autônomo; validar UI real em dispositivos móveis e desktop, reduzir eventuais saltos entre poses e confirmar compatibilidade com portal privado. Sem qualquer mudança em Netlify ou publicação antes de aprovação.
