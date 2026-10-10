@@ -1,0 +1,47 @@
+# Checklist geral permanente
+
+Atualizado 2026-10-10. `[x]` significa validação local documentada em etapa anterior; não equivale a teste em produção. Itens que só possuem implementação ficam desmarcados.
+
+- [ ] **DOC-001** [P0] Criar fonte única da documentação /docs — Implementada, aguardando testes; Revisar sincronização GitHub.
+- [ ] **DOC-002** [P0] Arquivo mestre do projeto — Implementada, aguardando testes; Revisão final dos dados.
+- [ ] **DOC-003** [P0] Registro, checklist, roadmap e changelog cruzados — Implementada, aguardando testes; Conferir contagens e links.
+- [ ] **DOC-004** [P1] Auditoria retrospectiva de demandas esquecidas — Em análise; Comparar com demais conversas indisponíveis.
+- [x] **DOC-006** [P1] Corrigir escopo indevido da UX para prompts do ChatGPT — Removido do site e documentação V3.2; ids anulados e não reutilizáveis.
+- [ ] **DOC-005** [P1] Guia de continuidade entre chats — Implementada, aguardando testes; Revisar com o próximo responsável.
+- [ ] **DEP-001** [P0] Sincronizar código completo com repositório GitHub — Planejada; Sincronizar após conferência de branch/PR.
+- [ ] **DEP-002** [P0] Inspecionar Netlify oficial e proteger hospedagem — Em testes; Verificar conteúdo do deploy em conta autorizada.
+- [ ] **DEP-003** [P0] Implantar homologação sem expor dados privados — Bloqueada; Conectar versão correta e confirmar acesso.
+- [ ] **DEP-004** [P0] Testar formulário em Netlify Forms — Bloqueada; Habilitar e testar com dados fictícios de teste.
+- [ ] **DEP-005** [P1] Confirmar domínio e habilitar SEO de produção — Bloqueada; Confirmar domínio e aprovação final.
+- [x] **UX-005** [P0] Auditar contraste nas seções claras — Concluída e validada em testes locais; Repetir no Netlify/Lighthouse.
+- [ ] **UX-006** [P1] Fotografias autênticas e logo oficial em alta resolução — Em análise; Comparar com originais oficiais e aprovar.
+- [x] **BUG-001** [P0] Título quase invisível sobre fundo marfim — Concluída e validada em testes locais; Revalidar visualmente em produção.
+- [ ] **BUG-002** [P0] Formulário indicava sucesso sem confirmação — Implementada, aguardando testes de produção; Testar Netlify Forms de ponta a ponta.
+- [x] **BUG-003** [P1] Estouro horizontal em telas de 320px — Concluída e validada em testes locais; Repetir em dispositivos.
+- [x] **BUG-004** [P1] Possível duplicação de canonical no runtime — Concluída e validada em testes locais; Verificar no deploy de domínio real.
+- [ ] **BUG-005** [P0] URLs e dados de produção ainda incompletos — Bloqueada; Validar domínio e publicação.
+- [x] **SEC-001** [P0] Central de Segurança antifraude — Concluída e validada em testes locais; Revisar validade dos contatos periodicamente.
+- [x] **SEC-002** [P1] Verificador educativo de canais cadastrados — Concluída e validada em testes locais; Testar revisão e revogação de contatos.
+- [ ] **SEC-003** [P0] Plano seguro para canal sigiloso de denúncias e anexos — Planejada; Contratar/desenvolver backend após DPIA/segurança.; **aprovação de implementação pendente de análise de viabilidade, segurança e LGPD**
+- [ ] **SEC-004** [P0] Sistema real de confirmação de cobranças — Bloqueada; Definir responsável, banco, autenticação e logs.; **aprovação de implementação pendente de análise de viabilidade, segurança e LGPD**
+- [ ] **SEC-005** [P1] Validação real de documentos emitidos — Bloqueada; Backend, assinatura e revogação antes do uso.; **aprovação de implementação pendente de análise de viabilidade, segurança e LGPD**
+- [ ] **SEC-006** [P0] Portal autenticado de clientes e arquivos — Bloqueada; Especificar identidade, RBAC/MFA, armazenamento privado.; **aprovação de implementação pendente de análise de viabilidade, segurança e LGPD**
+- [ ] **SEC-007** [P1] Painel admin de canais com trilha de auditoria — Bloqueada; Criar backend e permissões.; **aprovação de implementação pendente de análise de viabilidade, segurança e LGPD**
+- [ ] **SEC-008** [P0] Política de privacidade e responsabilidade LGPD — Em análise; Definir responsável, retenção, canais de direitos.
+- [ ] **SEC-009** [P0] MFA, HTTPS, headers, backup e restauração — Em testes; Auditoria real de produção com responsável.
+- [ ] **SEC-010** [P1] Separar projeto de selos por conselhos — Implementada, aguardando testes; Desenvolver proposta própria sem selo no site.
+- [x] **INT-001** [P1] Serviços oficiais INSS/SUS/ANS/OAB/ITI — Concluída e validada em testes locais; Verificar URLs periodicamente.
+- [ ] **INT-002** [P2] DataJud / Jusbrasil e monitoramento processual — Adiada; Reavaliar licenças e finalidade.
+- [ ] **INT-003** [P2] Login Gov.br para clientes privados — Rejeitada; Manter login próprio futuro.
+- [ ] **INT-004** [P2] Integração API CNES e medicamentos — Em análise; Verificar endpoint e termos.
+- [x] **CONT-001** [P1] Biblioteca jurídica com busca e guias — Concluída e validada em testes locais; Revisão jurídica editorial recorrente.
+- [x] **CONT-002** [P1] Acervo Instagram organizado e links de origem — Concluída e validada em testes locais; Confirmar licença/reuso de cada mídia.
+- [ ] **CONT-003** [P0] Revisar legislação e artigo por advogado — Em análise; Registrar revisão por URL e data.
+- [x] **SOC-001** [P1] Dois Instagram oficiais vinculados — Concluída e validada em testes locais; Checar perfis e canal de golpes periodicamente.
+- [ ] **SOC-002** [P1] Materiais de prevenção para Instagram/WhatsApp — Implementada, aguardando testes; Aprovar e publicar manualmente nas contas.
+- [ ] **SEO-001** [P0] Sitemap, canonical e robots no domínio final — Bloqueada; Configurar URL exata e validar indexação.
+- [ ] **SEO-002** [P1] Revisão de fontes e datas de artigos — Em análise; Revisar por advogado antes da indexação.
+- [ ] **LEG-001** [P1] Aprovação institucional informada pelo usuário — Aprovada; Guardar comprovante de revisão formal interna.
+- [ ] **LEG-002** [P0] Revisar normas publicitárias OAB na publicação — Planejada; Conferir regras vigentes e textos definitivos.
+- [ ] **TASK-001** [P2] Calculadoras previdenciárias com tabelas versionadas — Adiada; Validar fontes, fórmulas, limites e testes.
+- [ ] **TASK-002** [P1] Área do cliente com atualização individual de caso — Bloqueada; Definir provedor seguro, perfis e testes isolamento.
