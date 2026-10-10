@@ -51,7 +51,7 @@ test('credenciais ausentes: fail-closed',async()=>{
 });
 test('senha incorreta nao gera cookie',async()=>{
  const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{origin,'content-type':'application/x-www-form-urlencoded'},body:'senha=errada'}));
- assert.equal(res.status,401);assert.equal(res.headers.has('set-cookie'),false);passed++;
+ assert.equal(res.status,401);assert.ok(!String(res.headers.get('set-cookie')).includes('__Host-ra_private='));passed++;
 });
 test('login cria cookie seguro por 12 horas e permite pagina e asset',async()=>{
  const {response,cookie}=await signedIn('/seguranca.html');
@@ -138,6 +138,96 @@ test('redirecionamento externo bloqueado',async()=>{
  assert.equal(shared.isAllowedDestination('/__acesso/sair'),'/');
  assert.equal(shared.isAllowedDestination('/areas/bpc-loas.html?x=1'),'/areas/bpc-loas.html?x=1');passed++;
 });
+
+async function issuedLoginChallenge(path='/'){
+  const page=await gate.default(req(path),ctx);
+  const html=await page.text();
+  const match=html.match(/name="csrf" value="([^"]+)"/);
+  assert.ok(match,'formulário deve possuir token CSRF');
+  const cookie=page.headers.get('set-cookie').split(';')[0];
+  assert.ok(cookie.startsWith('__Host-ra_login_csrf='));
+  return {csrf:match[1],cookie,html,page};
+}
+function postLogin(csrf,cookie,headers={},password=secrets.RA_PRIVATE_ACCESS_PASSWORD){
+  return login.default(req('/__acesso/entrar',{
+    method:'POST',headers:{'content-type':'application/x-www-form-urlencoded',...(cookie?{cookie}:{}),...headers},
+    body:new URLSearchParams({senha:password,csrf,return_to:'/seguranca.html'})
+  }));
+}
+test('desafio em HTML possui cookie CSRF HttpOnly e SameSite Strict',async()=>{
+ const c=await issuedLoginChallenge();
+ assert.match(c.page.headers.get('set-cookie'),/Secure/);
+ assert.match(c.page.headers.get('set-cookie'),/HttpOnly/);
+ assert.match(c.page.headers.get('set-cookie'),/SameSite=Strict/);
+ assert.match(c.page.headers.get('set-cookie'),/Max-Age=900/);
+ assert.ok(!c.html.includes(secrets.RA_PRIVATE_ACCESS_PASSWORD));passed++;
+});
+test('WebView sem Origin, Referer ou Fetch-Site aceita token CSRF válido',async()=>{
+ const c=await issuedLoginChallenge();
+ const res=await postLogin(c.csrf,c.cookie);
+ assert.equal(res.status,303);assert.ok(res.headers.get('set-cookie').startsWith('__Host-ra_private='));
+ passed++;
+});
+test('WebView com Origin null e metadata none aceita apenas token CSRF válido',async()=>{
+ const c=await issuedLoginChallenge();
+ const res=await postLogin(c.csrf,c.cookie,{origin:'null','sec-fetch-site':'none'});
+ assert.equal(res.status,303);passed++;
+});
+test('prévia com Origin divergente aceita POST com cookie e token válidos',async()=>{
+ const c=await issuedLoginChallenge();
+ const res=await postLogin(c.csrf,c.cookie,{origin:'https://outro-dominio.invalid','sec-fetch-site':'cross-site'});
+ assert.equal(res.status,303);passed++;
+});
+test('POST cross-site sem cookie CSRF nao libera cookie de sessao',async()=>{
+ const c=await issuedLoginChallenge();
+ const res=await postLogin(c.csrf,'',{origin:'https://evil.example'});
+ assert.equal(res.status,403);
+ assert.ok(!String(res.headers.get('set-cookie')).includes('__Host-ra_private='));
+ passed++;
+});
+test('CSRF copiado de outra aba ou cookie trocado nao concede sessao',async()=>{
+ const a=await issuedLoginChallenge();const b=await issuedLoginChallenge();
+ const res=await postLogin(a.csrf,b.cookie);
+ assert.equal(res.status,403);passed++;
+});
+test('token CSRF adulterado nao permite login sem Origin',async()=>{
+ const c=await issuedLoginChallenge();
+ const t=c.csrf.slice(0,-1)+(c.csrf.endsWith('A')?'B':'A');
+ const res=await postLogin(t,c.cookie);
+ assert.equal(res.status,403);passed++;
+});
+test('CSRF expirado e rejeitado em navegador incorporado',async()=>{
+ const c=await issuedLoginChallenge();const realNow=Date.now;
+ Date.now=()=>realNow()+16*60*1000;
+ try{assert.equal((await postLogin(c.csrf,c.cookie)).status,403);}
+ finally{Date.now=realNow;}
+ passed++;
+});
+test('token CSRF de um domínio não autentica em outro deploy',async()=>{
+ const c=await issuedLoginChallenge();
+ const alternative='https://deploy-preview-8--rodrigo-alves-advocacia.netlify.app';
+ const res=await login.default(new Request(alternative+'/__acesso/entrar',{
+   method:'POST',headers:{cookie:c.cookie,'content-type':'application/x-www-form-urlencoded'},
+   body:new URLSearchParams({senha:secrets.RA_PRIVATE_ACCESS_PASSWORD,csrf:c.csrf})
+ }));
+ assert.equal(res.status,403);passed++;
+});
+test('erro de origem renderiza formulario de recuperação em lugar de pagina preta',async()=>{
+ const res=await postLogin('','');
+ assert.equal(res.status,403);
+ const html=await res.text();
+ assert.match(html,/Não foi possível confirmar este acesso/);
+ assert.match(html,/name="csrf"/);
+ passed++;
+});
+test('senha incorreta apos CSRF válido continua negada e recebe novo formulario',async()=>{
+ const c=await issuedLoginChallenge();
+ const res=await postLogin(c.csrf,c.cookie,{},'senha-errada');
+ assert.equal(res.status,401);assert.match(await res.text(),/Senha não reconhecida/);
+ assert.ok(!String(res.headers.get('set-cookie')).includes('__Host-ra_private='));
+ passed++;
+});
+
 test('limite de tentativas configurado na infraestrutura',()=>{
  assert.deepEqual(login.config.rateLimit,{windowLimit:5,windowSize:60,aggregateBy:['ip','domain']});passed++;
 });
