@@ -11,10 +11,16 @@
 # Do not duplicate the function declaration: TOML declarations run before inline declarations.
 # The guard is the only TOML edge declaration, guaranteeing it runs before the login handler.
 
-# Validate the complete portal test suite in deploy previews only.
-# No production change: no command is set under [build] or [context.production].
+# Validate the complete portal test suite before both preview and production deploys.
 [context.deploy-preview]
   command = "node --experimental-strip-types --test tests/*.mjs"
 
 [context.deploy-preview.environment]
+  NODE_VERSION = "22"
+
+# A production release cannot publish if regression tests fail.
+[context.production]
+  command = "node --experimental-strip-types --test tests/*.mjs"
+
+[context.production.environment]
   NODE_VERSION = "22"
