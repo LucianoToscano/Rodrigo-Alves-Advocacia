@@ -93,3 +93,7 @@ Assistente ilustrado autônomo com **10 poses reais da última montagem fornecid
 
 ### AVR-001 V3 — Integração contínua de alta definição (10/10/2026)
 O assistente guia ilustrado agora usa **uma única imagem WebP lossless RGBA de 811×1506 px**, pixel a pixel idêntica ao recorte aprovado (467 KB), renderização contínua por WebGL2 ou Canvas 2D como alternativa, sem alternância de poses. Scripts e estilos permanecem isolados e carregados pelo `site.js` pré-existente. Os cinco assuntos e links informativos foram preservados. Testes de interação isolados em Chromium em 1440/390/320 px passaram, sem erro JavaScript ou overflow; teste de domínio real, leitores de tela, dispositivo físico e QA de produção ainda pendentes. PR #10 draft, sem merge ou mudança na Netlify. Ver `docs/ASSISTENTE_VIRTUAL_RODRIGO_V3.md`.
+
+
+### AVR-001 — decisão atual: OCULTO E DESATIVADO (10/10/2026)
+Por solicitação expressa do usuário, o assistente animado Rodrigo V3 foi colocado em espera. O carregamento em `site/assets/js/site.js` possui flag fixa `ASSISTENTE_RODRIGO_ATIVO = false`, impedindo exibição e inicialização do componente. Preservados personagem HD, código, testes e documentação na branch de revisão PR #10. **Não reativar nem publicar** até novo pedido. A `main` e as configurações Netlify/SSO permanecem intactas.

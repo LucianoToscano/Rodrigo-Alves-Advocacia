@@ -78,3 +78,9 @@ Alterado assistente V1 para V2 com 10 poses individuais com transparência, alte
 - Testes históricos V1/V2 adaptados para verificar regressões relevantes; adicionado `test-assistente-v3.mjs`.
 - Testes Chromium isolados em desktop e telas 390/320 px: abrir/fechar painel, link educativo, pausa e Escape passaram. Ambiente bloqueou navegação por localhost; homologação no site real permanece pendente.
 - Sem merge, deploy, alteração de conteúdo institucional, login, SSO, Edge Functions ou Netlify Forms.
+
+
+## 2026-10-10 — AVR-001 suspenso, assistente oculto
+- Usuário solicitou deixar assistente Rodrigo desligado por enquanto e retomar melhorias futuramente.
+- Desabilitado o carregamento em `site/assets/js/site.js` por flag `ASSISTENTE_RODRIGO_ATIVO = false`. Sem injeção de CSS, JS do widget ou DOM do personagem.
+- Arquivos, documentação, imagens e testes preservados na branch PR #10 (rascunho). Sem merge na `main`, sem mudança no portal privado/Netlify SSO.

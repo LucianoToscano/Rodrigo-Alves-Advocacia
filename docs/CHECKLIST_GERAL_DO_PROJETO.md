@@ -146,3 +146,10 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [ ] Executar testes integrais na branch (Netlify deploy preview protegido e dispositivos reais) e validar desempenho/acessibilidade com leitores de tela.
 - [ ] Rever sobreposição com cookies, WhatsApp, banner, botão sair e telas de menor altura.
 - [ ] Obter revisão visual e editorial antes de liberar deploy/merge.
+
+
+### AVR-001 — suspensão temporária aprovada
+- [x] Registrar solicitação de desativação e manter histórico, imagens, código e demais recursos.
+- [x] Aplicar bloqueio explícito no carregamento do assistente para que permaneça oculto na prévia.
+- [ ] Validar build de prévia após commit e conferir que o personagem não aparece no domínio de homologação.
+- [ ] Retomar refinamento de rigging, nitidez e naturalidade apenas quando solicitado.

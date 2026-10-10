@@ -28,3 +28,6 @@
 - O teste WebGL2 real depende de navegação/ambiente compatível; em Chromium do protótipo anterior havia fallback Canvas 2D. O funcionamento visual em páginas reais e sobreposições com banners, menu, WhatsApp, botão sair e leitores de tela precisa de QA adicional.
 - **Pendente:** testar preview Netlify sob SSO, verificar dispositivos iOS/Android reais, confirmar revisão editorial/jurídica e executar a suíte total no checkout real antes de fazer merge.
 - **Não mudar** `main`, SSO, senha, Edge Functions, Netlify Forms, `netlify.toml` ou URLs de produção sem autorização e controles existentes.
+
+## PAUSADO / OCULTO — solicitação de 10/10/2026
+**AVR-001 está desativado por decisão do usuário.** O carregador em `site/assets/js/site.js` usa `const ASSISTENTE_RODRIGO_ATIVO = false` e retorna antes de inserir CSS, script ou qualquer elemento do assistente. O personagem não deve aparecer nem se movimentar em nenhuma página enquanto esse bloqueio estiver ativo. Guardar os arquivos JS/CSS/WebP, testes e histórico para futura melhoria; **não remover a proteção ou publicar** sem novo pedido explícito. PR #10 permanece em revisão/pausado.

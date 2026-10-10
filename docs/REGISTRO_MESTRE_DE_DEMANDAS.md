@@ -502,3 +502,9 @@ Relação entre os PRs: #2 base V3.3, #3 V3.5 autenticada, #6 V3.6, #7 V3.7. Nã
 - **Estado:** implementado na branch privada `feat/assistente-rodrigo-animado-v1`; PR #10 draft; aprovação visual, jurídica e QA real pendentes.
 - **Mudança:** renderização contínua baseada em uma única imagem WebP lossless 811×1506, sem poses sucessivas, com fallback Canvas 2D, cinco caminhos do site, opção de pausa e preferência reduzida.
 - **Evidências:** `site/assets/img/assistente-rodrigo-v3.webp`, `site/assets/js/assistente-rodrigo.js`, `site/assets/css/assistente-rodrigo.css`, `tests/test-assistente-v3.mjs`, `docs/ASSISTENTE_VIRTUAL_RODRIGO_V3.md`.
+
+
+### AVR-001 — Atualização de status: PAUSADA / OCULTA
+- **Decisão do usuário (10/10/2026):** deixar assistente invisível e desligado até novo pedido de melhoria.
+- **Implementação:** bloqueio de carregamento no `site/assets/js/site.js` da branch de revisão, flag `ASSISTENTE_RODRIGO_ATIVO = false`; manter arquivos do projeto íntegros.
+- **Próxima ação:** somente após autorização específica, revisar animação mais fluida e reativar em ambiente controlado. Não implementar automaticamente nem publicar.

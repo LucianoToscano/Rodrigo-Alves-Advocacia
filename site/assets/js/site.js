@@ -179,6 +179,9 @@
 /* AVR-001: carregamento progressivo do assistente ilustrado, sem dependências externas. */
 (() => {
   'use strict';
+  // AVR-001: assistente estacionado por solicitação do usuário. Não carregar scripts, CSS ou personagem.
+  const ASSISTENTE_RODRIGO_ATIVO = false;
+  if (!ASSISTENTE_RODRIGO_ATIVO) return;
   const own = document.currentScript || [...document.scripts].find(s => /\/assets\/js\/site\.js(?:\?|$)/.test(s.src));
   if (!own || document.querySelector('script[data-ra-assistente]')) return;
   const assets = new URL('../', own.src);
