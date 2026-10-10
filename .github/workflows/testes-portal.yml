@@ -1,0 +1,27 @@
+name: Testes do portal privado
+
+on:
+  pull_request:
+    paths:
+      - 'netlify/**'
+      - 'tests/**'
+      - '.github/workflows/testes-portal.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  testes:
+    name: Testes Node 22
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Obter codigo da branch para testes
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Executar suite integral sem segredos de producao
+        run: node --experimental-strip-types --test tests/*.mjs
