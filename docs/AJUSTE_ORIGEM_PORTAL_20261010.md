@@ -1,34 +1,34 @@
-# Ajuste de validação de origem do portal privado — 10/10/2026
+# Correção de compatibilidade do portal com navegadores móveis — 10/10/2026
 
-## Escopo
-Correção incremental na branch de revisão `fix/portal-origin-preview-20261010`, baseada na V3.7. Nenhuma alteração em `main`, deploy, credenciais ou Netlify SSO.
+## Evidência relatada
+Ao enviar a senha no navegador incorporado do celular, a tela exibiu apenas **"Origem não autorizada."**. A requisição foi bloqueada pelo controle anti-CSRF antes da validação efetiva do login. A captura comprova o sintoma HTTP de origem, mas não revela os cabeçalhos que chegaram ao Netlify nem garante uma única causa.
 
-## Problema analisado
-O POST de login e o de logout rejeitavam toda requisição em que o cabeçalho `Origin` não fosse exatamente igual a `new URL(request.url).origin`. Em navegadores que omitem `Origin`, inclusive alguns ambientes de prévia/restrições de privacidade, um envio legítimo podia resultar em HTTP 403.
+## Correção de login
+Preservado o primeiro critério: um POST com evidências coerentes de mesma origem pode ser aceito. Para clientes que omitem ou modificam cabeçalhos `Origin`, `Referer` ou `Sec-Fetch-Site`, há agora uma segunda validação independente:
+- O HTML servido pelo próprio Edge gera um **token aleatório HMAC-SHA256 de finalidade exclusiva "login-csrf"**, assinado com segredo armazenado apenas na Netlify.
+- O mesmo token é enviado em cookie `__Host-ra_login_csrf` com `Secure; HttpOnly; SameSite=Strict; Path=/` e validade máxima de 15 minutos; o token também segue em campo oculto do formulário.
+- Quando a prova por cabeçalhos não é suficiente, **cookie e formulário devem apresentar o mesmo token válido**, vinculado ao host da requisição, dentro da janela de tempo; o servidor verifica sua assinatura.
+- Tokens copiados de outra sessão, alterados, expirados ou de outro host são rejeitados. Pedidos de outro site normalmente não enviam o cookie SameSite=Strict, mesmo se o adversário obtiver seu próprio token.
+- Um bloqueio HTTP 403 agora exibe a tela de senha com orientação, nunca uma página preta contendo só a frase do erro. Senha incorreta continua HTTP 401. Tokens de autenticação e senhas não são colocados no HTML ou JavaScript.
 
-## Política implementada
-O novo helper do servidor `netlify/lib/portal-origin.ts` foi reutilizado nas duas Edge Functions. Uma requisição de formulário é admitida apenas quando existe pelo menos um sinal positivo, não contraditório, de mesma origem:
+## Correção de logout
+- GET `/__acesso/saida-token` só responde a uma **sessão autenticada válida** e retorna JSON sem cache contendo token HMAC específico para logout, derivado no servidor da sessão e do host (não é senha nem cookie de sessão).
+- O botão de sair busca esse token via `fetch` same-origin e inclui `csrf` em POST `/__acesso/sair`. Se o navegador não oferecer prova de origem confiável, o servidor valida o token vinculado à sessão.
+- Token ausente, falso ou referente a outra sessão não libera logout sem prova de mesma origem. Não há endpoint público para obter tokens de saída.
 
-- `Origin` exato; ou
-- na ausência de `Origin`, `Sec-Fetch-Site: same-origin`; ou
-- na ausência de `Origin`, `Referer` com a mesma origem.
+## Escopo e integridade
+Branch `fix/portal-origin-preview-20261010`, PR #8, baseada na V3.7. `main` e produção preservadas, acesso SSO mantido. Nenhuma alteração de senha, segredos, identidade visual, imagens institucionais ou conteúdos jurídicos. Sem novas páginas e sem cadastro de clientes.
 
-Todas as evidências presentes devem ser coerentes. `Origin: null`, origem externa, `Referer` externo ou malformado e `Sec-Fetch-Site: cross-site`, `same-site` ou `none` são rejeitados. Sem qualquer evidência, a decisão é negar (fail-closed). O helper não considera `X-Forwarded-Host` nem aceita automaticamente subdomínios do Netlify.
+Os testes automatizados cobrem fluxos em navegador comum e WebView, senha errada, cookie seguro, token expirado/adulterado, host divergente, cookie trocado, logout vinculado à sessão, acessos sem autenticação, origem externa, rota de sessão e restauração em caso de falha.
 
-**Limitação:** isso não garante que um navegador que omita todos os três cabeçalhos funcionará. Também não encobre eventual reescrita de host/origem no lado da Netlify. Nesse caso, verificar o ambiente real antes de alterar a política.
+O comando de testes em `netlify.toml` executa `node --experimental-strip-types --test tests/*.mjs` no **contexto deploy-preview** com Node 22. O estado `ready` comprova build com sucesso, mas os logs de execução ainda devem ser auditados para informar quantidade exata de testes.
 
-## Testes e evidências
-- Regra isolada executada com Node 22 (`--experimental-strip-types`): 16/16 casos de prova de origem e conflitos passaram.
-- Dez casos adicionais foram incorporados em `tests/test-portal.mjs` para login/logout (aceitações legítimas, rejeições, ausência de cookie em requisições negadas e bloqueio de cabeçalhos contraditórios).
-- **Pendente:** executar o conjunto completo de testes do repositório com `node --experimental-strip-types --test tests/*.mjs` após checkout desta branch. Não afirmar aprovação da integração nem da Netlify sem essa execução.
-- **Pendente:** confirmar compilação das Edge Functions e comportamento de login/logout no deploy de branch real usando desktop, Chrome Android, Safari iOS e navegador incorporado.
+## Gate de validação real — sem retirar SSO
+1. Confirmar build da última revisão do PR #8 como `ready` e presença das **2 Edge Functions**.
+2. Acessar a URL da prévia pelo celular, autenticar SSO quando necessário e usar a tela de senha com o formulário recém-carregado (não reutilizar uma aba antiga).
+3. Verificar senha correta, senha errada, navegação interna, imagens, links, **Encerrar acesso**, retorno à tela inicial e sessão expirando.
+4. Se ocorrer 403 mesmo com token, verificar primeiro compatibilidade dos cookies first-party e host efetivo de prévia; nunca remover o controle anti-CSRF como solução rápida.
+5. Verificar rate limiting real, URL antiga de deploy, rotas estáticas e segurança de acesso não autenticado.
+6. Revisão final e aprovação explícita antes de mesclar ou substituir SSO.
 
-## Gate obrigatório antes de publicar
-1. Preservar SSO no projeto oficial `rodrigo-alves-advocacia` e em seus deploys enquanto se homologa.
-2. Manter segredos somente no painel Netlify, escopo Functions. Não gravar senha nem chave no GitHub, logs, respostas ou no chat.
-3. Testar no mesmo domínio de prévia: POST válido sem `Origin`, com `Sec-Fetch-Site: same-origin`; POST válido com `Origin`; rejeição de origens externas, nulas ou contraditórias; expiração, cookie `__Host-`, logout e redirecionamento local.
-4. Examinar limitação de tentativas do provedor, a abrangência do guard `/*`, proteção de imagens/JS/JSON, URLs antigas de deploy e retorno seguro em erros.
-5. Se falhar com `Origin` distinto apesar de navegador legítimo, analisar os cabeçalhos de solicitação **sem gravar senhas ou cookies** e revisar causa real; não desativar verificação de origem sem substituição segura.
-6. Não mesclar PRs nem remover SSO ou alterar produção sem aprovação explícita e QA de segurança.
-
-O código não confirma correção em produção; esta é uma alteração pronta para revisão e testes integrados.
+**Ainda não homologado no navegador real do usuário.** Não registrar êxito de login até o teste manual confirmado.
