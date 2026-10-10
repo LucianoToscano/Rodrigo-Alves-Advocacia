@@ -83,6 +83,54 @@ test('saida apaga cookie e bloqueia POST cross-origin',async()=>{
 test('login POST cross-origin negado',async()=>{
  const response=await login.default(req('/__acesso/entrar',{method:'POST',headers:{origin:'https://evil.example','content-type':'application/x-www-form-urlencoded'},body:'senha=1'}));assert.equal(response.status,403);passed++;
 });
+
+test('login sem Origin: metadado same-origin permite envio legitimo',async()=>{
+ const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{'sec-fetch-site':'same-origin','content-type':'application/x-www-form-urlencoded'},body:new URLSearchParams({senha:secrets.RA_PRIVATE_ACCESS_PASSWORD,return_to:'/seguranca.html'})}));
+ assert.equal(res.status,303);assert.match(res.headers.get('set-cookie'),/HttpOnly/);passed++;
+});
+test('login sem Origin: Referer exato pode validar navegador legado',async()=>{
+ const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{referer:origin+'/index.html','content-type':'application/x-www-form-urlencoded'},body:new URLSearchParams({senha:secrets.RA_PRIVATE_ACCESS_PASSWORD})}));
+ assert.equal(res.status,303);passed++;
+});
+test('login sem Origem, Referer ou Fetch Metadata falha fechado',async()=>{
+ const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
+ assert.equal(res.status,403);assert.equal(res.headers.has('set-cookie'),false);passed++;
+});
+test('Origin externa nunca e sobrescrita por Sec-Fetch-Site same-origin',async()=>{
+ const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{origin:'https://evil.example','sec-fetch-site':'same-origin','content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
+ assert.equal(res.status,403);passed++;
+});
+test('Origin nula, parecida e mesmo site em subdominio sao rejeitados',async()=>{
+ for(const headers of [{origin:'null','sec-fetch-site':'same-origin'},{origin:origin+'.evil.example'},{'sec-fetch-site':'same-site'}]){
+  const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{...headers,'content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
+  assert.equal(res.status,403);
+ }passed++;
+});
+test('Sec-Fetch-Site cross-site rejeita mesmo quando Origin coincide',async()=>{
+ const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{origin,'sec-fetch-site':'cross-site','content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
+ assert.equal(res.status,403);passed++;
+});
+test('Referer externa ou malformada rejeitada mesmo com Sec-Fetch-Site same-origin',async()=>{
+ for(const referer of ['https://evil.example/','%%%']){
+  const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{referer,'sec-fetch-site':'same-origin','content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
+  assert.equal(res.status,403);
+ }passed++;
+});
+test('logout aceita sinal same-origin sem Origin e bloqueia contradicoes',async()=>{
+ const good=await gate.default(req('/__acesso/sair',{method:'POST',headers:{'sec-fetch-site':'same-origin'}}),ctx);
+ assert.equal(good.status,303);assert.match(good.headers.get('set-cookie'),/Max-Age=0/);
+ const bad=await gate.default(req('/__acesso/sair',{method:'POST',headers:{origin,'sec-fetch-site':'cross-site'}}),ctx);
+ assert.equal(bad.status,403);passed++;
+});
+test('cabecalho X-Forwarded-Host nao substitui prova de origem',async()=>{
+ const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{'x-forwarded-host':new URL(origin).host,'content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
+ assert.equal(res.status,403);passed++;
+});
+test('Origin igual mas Referer contraditoria e rejeitada',async()=>{
+ const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{origin,referer:'https://evil.example','content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
+ assert.equal(res.status,403);passed++;
+});
+
 test('redirecionamento externo bloqueado',async()=>{
  assert.equal(shared.isAllowedDestination('//evil.test'),'/');
  assert.equal(shared.isAllowedDestination('/\\evil.test'),'/');
