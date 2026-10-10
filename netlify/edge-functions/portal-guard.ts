@@ -1,5 +1,6 @@
 import {COOKIE_NAME, SIGNIN, SIGNOUT, PUBLIC_LOGO, PUBLIC_TOGGLE, configured, durationSeconds,
   isAllowedDestination, loginPage, unavailable, validSession, clearedCookie, privacyHeaders} from '../lib/portal-shared.ts';
+import {isSameOriginSubmission} from '../lib/portal-origin.ts';
 
 // Important: this MUST be installed on /*, including images, JSON, scripts, and internal routes.
 export default async function portalGuard(request: Request, context: any): Promise<Response | void> {
@@ -22,7 +23,7 @@ export default async function portalGuard(request: Request, context: any): Promi
     if (!configured() || duration === null) return unavailable();
     if (path === SIGNOUT) {
       if (method !== 'POST') return new Response('Método não permitido', {status:405,headers:privacyHeaders({'content-type':'text/plain'})});
-      if (request.headers.get('origin') !== url.origin) return new Response('Origem não autorizada.', {status:403,headers:privacyHeaders({'content-type':'text/plain'})});
+      if (!isSameOriginSubmission(request)) return new Response('Origem não autorizada.', {status:403,headers:privacyHeaders({'content-type':'text/plain'})});
       return new Response(null,{status:303,headers:privacyHeaders({'location':'/','set-cookie':clearedCookie()})});
     }
 
@@ -33,7 +34,7 @@ export default async function portalGuard(request: Request, context: any): Promi
       // Never return HTML to requests for protected binary assets or data files.
       const html = path === '/' || path.endsWith('/') || path.endsWith('.html') || !/\.[a-zA-Z0-9]{1,8}$/.test(path);
       if (!html) return new Response('Autenticação necessária.',{status:401,headers:privacyHeaders({'content-type':'text/plain'})});
-      return loginPage(destination);
+      return await loginPage(destination, false, url.host);
     }
     const next = await context.next();
     const headers = new Headers(next.headers);
