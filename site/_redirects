@@ -1,0 +1,5 @@
+# Rotas para a prévia por upload manual.
+/seguranca /seguranca.html 200
+/cartao /cartao-profissional.html 200
+/saude /areas/planos-de-saude.html 301
+/auxilio-acidente /areas/auxilio-acidente.html 301

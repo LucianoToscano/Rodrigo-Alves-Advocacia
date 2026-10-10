@@ -1,0 +1,146 @@
+[
+  {
+    "area": "Direito da Saúde",
+    "tipo": "Guia",
+    "titulo": "Planos de saúde: cobertura e negativas",
+    "resumo": "Entenda documentos, protocolos e critérios para analisar uma negativa de cobertura.",
+    "url": "areas/planos-de-saude.html",
+    "busca": "plano saude negativa operadora cobertura protocolo contrato"
+  },
+  {
+    "area": "Direito da Saúde",
+    "tipo": "Guia",
+    "titulo": "Medicamentos de alto custo: aspectos de cobertura",
+    "resumo": "Informações sobre prescrição, documentação e regras aplicáveis ao tratamento.",
+    "url": "areas/medicamentos-alto-custo.html",
+    "busca": "medicamento alto custo oncologia imunobiologico"
+  },
+  {
+    "area": "Direito da Saúde",
+    "tipo": "Guia",
+    "titulo": "Tratamentos e cirurgias: aspectos de cobertura",
+    "resumo": "Orientações gerais sobre solicitações, documentação e análise contratual.",
+    "url": "areas/tratamentos-e-cirurgias.html",
+    "busca": "cirurgia tratamento terapias cobertura"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Guia",
+    "titulo": "Auxílio-acidente: requisitos legais",
+    "resumo": "Conheça o benefício e a importância da análise de sequelas e trabalho habitual.",
+    "url": "areas/auxilio-acidente.html",
+    "busca": "auxilio acidente sequela trabalho segurado inss"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Guia",
+    "titulo": "Perícia do INSS: finalidade e documentação",
+    "resumo": "Entenda a avaliação e como consultar informações oficiais.",
+    "url": "areas/pericia-inss.html",
+    "busca": "pericia inss medico afastamento documentos"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Guia",
+    "titulo": "BPC/LOAS: critérios e orientações",
+    "resumo": "Diferença entre benefício assistencial e aposentadoria, cadastro e requisitos.",
+    "url": "areas/bpc-loas.html",
+    "busca": "bpc loas deficiencia idoso cadunico renda"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Guia",
+    "titulo": "Benefícios por incapacidade",
+    "resumo": "Introdução aos requisitos e à avaliação da incapacidade para o trabalho.",
+    "url": "areas/beneficios-por-incapacidade.html",
+    "busca": "auxilio incapacidade temporaria aposentadoria permanente inss"
+  },
+  {
+    "area": "Direito da Saúde",
+    "tipo": "Artigo",
+    "titulo": "Negativa de plano de saúde: o que observar?",
+    "resumo": "Uma leitura inicial de documentos e justificativas de recusa.",
+    "url": "blog/artigo-negativa-plano-saude.html",
+    "busca": "negativa plano saude artigo ans"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Artigo",
+    "titulo": "Auxílio-acidente e retorno ao trabalho",
+    "resumo": "Entenda a diferença entre o retorno à atividade e os requisitos da lei.",
+    "url": "blog/artigo-auxilio-acidente.html",
+    "busca": "auxilio acidente voltar trabalho inss"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Artigo",
+    "titulo": "BPC/LOAS: diferenças em relação à aposentadoria",
+    "resumo": "Orientações introdutórias sobre o benefício assistencial.",
+    "url": "blog/artigo-bpc-loas.html",
+    "busca": "bpc loas inss aposentadoria"
+  },
+  {
+    "area": "Direito da Saúde",
+    "tipo": "Artigo",
+    "titulo": "Negativa de cobertura: como organizar informações",
+    "resumo": "Passos informativos para localizar protocolos e registrar a resposta da operadora.",
+    "url": "blog/guia-documentacao-negativa.html",
+    "busca": "negativa plano saúde protocolo documentos ans"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Artigo",
+    "titulo": "BPC: cadastro e informações oficiais",
+    "resumo": "Entenda como o Cadastro Único e os canais públicos se relacionam com o BPC.",
+    "url": "blog/guia-bpc-cadastro.html",
+    "busca": "bpc cadunico atualizacao biometria mds"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Guia",
+    "titulo": "BPC para pessoas com deficiência",
+    "resumo": "Entenda avaliações, requisitos e fontes oficiais do BPC.",
+    "url": "areas/bpc-pessoa-com-deficiencia.html",
+    "busca": "bpc deficiência biopsicossocial cadunico renda"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Guia",
+    "titulo": "Benefício negado pelo INSS: primeiros passos",
+    "resumo": "Como interpretar a decisão e localizar caminhos de revisão.",
+    "url": "areas/beneficio-negado-inss.html",
+    "busca": "indeferimento inss negativa prazo recurso"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Guia",
+    "titulo": "Recurso administrativo INSS e CRPS",
+    "resumo": "Conheça recurso ordinário, CRPS e prazo geral informado pelo governo.",
+    "url": "areas/recurso-administrativo-inss.html",
+    "busca": "crps recurso ordinario 30 dias junta"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Ferramenta",
+    "titulo": "Checklist educativo do BPC",
+    "resumo": "Marque e imprima uma lista informativa, sem informar seus dados.",
+    "url": "ferramentas/checklist-bpc.html",
+    "busca": "bpc checklist documentos cadunico"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Ferramenta",
+    "titulo": "Guia de benefício negado pelo INSS",
+    "resumo": "Etapas gerais e fontes públicas para entender uma decisão.",
+    "url": "ferramentas/guia-negativa-inss.html",
+    "busca": "inss beneficio indeferido guia recurso"
+  },
+  {
+    "area": "Previdenciário",
+    "tipo": "Ferramenta",
+    "titulo": "Organizador de documentos",
+    "resumo": "Listas para BPC, decisão do INSS e negativa de plano de saúde.",
+    "url": "ferramentas/organizar-documentos.html",
+    "busca": "organizador checklist saude previdencia documentos"
+  }
+]

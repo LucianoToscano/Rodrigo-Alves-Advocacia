@@ -1,0 +1,14 @@
+/* V6.1 — ajustes funcionais e acessibilidade, sem alterar a identidade visual. */
+button:disabled,button[disabled]{cursor:not-allowed;opacity:.65}
+:focus-visible{outline:3px solid #B59D76;outline-offset:3px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* Correção de overflow em telas compactas (320px), sem esconder conteúdo. */
+.about-grid >*, .about-photo, .about-copy {min-width:0;max-width:100%}
+@media(max-width:370px){
+ .about-grid{grid-template-columns:minmax(0,1fr)}
+ .about-copy h2{font-size:clamp(2.65rem,11vw,3.2rem);overflow-wrap:anywhere}
+ .ra-srv-hero h1{font-size:clamp(2.6rem,10.5vw,3.25rem);overflow-wrap:anywhere}
+}
+@media(max-width:370px){
+ .section h2,.section-head h2,.hero-content-premium h1{font-size:clamp(2.38rem,10vw,3rem);overflow-wrap:anywhere}
+}
