@@ -6,7 +6,6 @@ export const LOGIN_CSRF_SECONDS = 15 * 60;
 export const SESSION_SECONDS = 12 * 60 * 60;
 export const SIGNIN = '/__acesso/entrar';
 export const SIGNOUT = '/__acesso/sair';
-export const SIGNOUT_TOKEN = '/__acesso/saida-token';
 export const PUBLIC_LOGO = '/assets/img/logo-oficial-v2.webp';
 export const PUBLIC_TOGGLE = '/assets/js/portal-entry.js';
 
@@ -126,25 +125,6 @@ export async function validLoginCsrf(cookieHeader: string | null, submitted: str
       payload.iat! <= now + 30 && payload.exp! > now &&
       payload.exp! - payload.iat! > 0 && payload.exp! - payload.iat! <= LOGIN_CSRF_SECONDS;
   } catch { return false; }
-}
-
-
-function privateSessionToken(cookieHeader: string | null): string | null {
-  if (!cookieHeader || cookieHeader.length > 8192) return null;
-  const entry = cookieHeader.split(';').map(v => v.trim()).find(v => v.startsWith(COOKIE_NAME + '='));
-  if (!entry) return null;
-  const token = entry.slice(COOKIE_NAME.length + 1);
-  return token.length <= 4096 && token.startsWith('v1.') ? token : null;
-}
-// Bound to the authenticated session and site host, never derived in browser JS.
-export async function createLogoutCsrf(cookieHeader: string | null, host: string): Promise<string | null> {
-  const token = privateSessionToken(cookieHeader);
-  return token ? await sign('logout-csrf:' + host + ':' + token) : null;
-}
-export async function validLogoutCsrf(cookieHeader: string | null, submitted: string | null, host: string): Promise<boolean> {
-  if (!submitted || !/^[A-Za-z0-9_-]{43}$/.test(submitted)) return false;
-  const expected = await createLogoutCsrf(cookieHeader, host);
-  return !!expected && constantTimeEqual(encoder.encode(expected), encoder.encode(submitted));
 }
 
 export async function createSession(host: string, duration: number): Promise<string> {
