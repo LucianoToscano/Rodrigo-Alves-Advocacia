@@ -20,3 +20,14 @@
 
 ## Estado de continuidade após importação GitHub V3.3
 Pacote final Drive V3.3 com 72 arquivos/37 páginas. `site/` completo no GitHub em `chore/recuperacao-v33-20261010`, árvore SHA `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2` conferida local e remotamente. Docs e `institucional-selos/` também recuperados. `main` e PR #1 anteriores preservados. Netlify demo SSO, Forms desabilitado, deploy anterior `6aca2f8346e0a16fb3c6a76d`; V3.3 em hospedagem não homologada. Browser Chromium local bloqueado, portanto QA mobile e cliques requer Work/navegador autorizado. Não trocar fotos nem abrir site público sem aprovação.
+
+
+## DESTINO CANÔNICO DO GOOGLE DRIVE APÓS MIGRAÇÃO (10/10/2026)
+Pasta principal de propriedade de LucianoToscano: https://drive.google.com/drive/folders/1vcwfP0U-jQR-b2pbXHFgadp6t1wyUOj5
+Pasta de documentação: https://drive.google.com/drive/folders/1OyLCeTFBN_q3GM6SfcouyaykI70VoALr
+Guia de continuidade já **copiado** como DOCX no novo Drive: https://drive.google.com/file/d/1i1bz0XsZbyCrk1WKbD1Hqn0kd2mpkrRb/view (texto confere referência à V3.7 e PR #7).
+Pasta de código: https://drive.google.com/drive/folders/1ypbKe66-xUjO9VjjsY_xxUKJDY7-6IT7
+Backup: https://drive.google.com/drive/folders/1bf0nTzEqYOTpjnNQ9w05uq9WYmWB6jAf
+GitHub fonte de implementação: https://github.com/LucianoToscano/rodrigo-alves-advocacia (PR #2 → #3 → #6 → #7, todos não mesclados).
+**MUDANÇA DE CONEXÃO PENDENTE:** o plugin Drive deste chat devolveu perfil da conta antiga. Após o proprietário desconectá-la, conectar Drive na conta LucianoToscano, conferir get_profile e reler novo guia. Links antigos não são o destino da documentação.
+**RISCO DE COMPARTILHAMENTO CRÍTICO:** pasta nova foi observada com `anyone:writer`; solicitar ao proprietário corrigir por UI. Recomendar arquivo principal **Restrito** e uma área pública somente com GUIA COMPARTILHÁVEL read-only, sem backups, Instagram ou clientes. O conector atual não oferece alteração direta de permissão pública da pasta.

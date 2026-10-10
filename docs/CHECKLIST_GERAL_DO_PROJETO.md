@@ -95,3 +95,17 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [ ] Testar fisicamente NVDA, VoiceOver e TalkBack, zoom 200%/400%, PDF A4, 320px, contraste e teclado.
 - [ ] Revisar compatibilidade e privacidade externa do VLibras e linguagem jurídica com pessoa surda ou especialista em Libras.
 - [ ] Validar no Netlify oficial (SSO ainda ativo) o portal e as URLs/permalinks históricos; depois submeter PRs #2, #3, #6 e #7 por ordem.
+
+
+## MIGRAÇÃO DO DRIVE — 10/10/2026
+- [x] Identificar novo Arquivo Mestre no Drive LucianoToscano: https://drive.google.com/drive/folders/1vcwfP0U-jQR-b2pbXHFgadp6t1wyUOj5
+- [x] Verificar seis subpastas, inventário inicial (site 14, docs 39, Instagram 3, backups 3, selos 2, imagens 49).
+- [x] Confirmar cópia de guia de continuidade DOCX com referência à V3.7 no destino novo.
+- [x] Registrar novos IDs de localização, roteiro de migração e alerta de permissão pública na branch PR #7.
+- [ ] **URGENTE:** alterar `Qualquer pessoa com o link: Editor` no arquivo mestre — preferir `Restrito`. Para GPT externo somente guia sanitizado com `Leitor`.
+- [ ] Reconfigurar conexão do plugin Google Drive do ChatGPT para a conta LucianoToscano. Testar perfil de conta e gravação em destino protegido.
+- [ ] Verificar para cada subpasta e arquivo sensível as permissões efetivas após mudança.
+- [ ] Criar/publicar apenas o guia GPT sanitizado como Leitor; conferir acesso externo em navegação anônima.
+- [ ] Atualizar o conteúdo de links antigos dentro de documentos DOCX copiados, **após reconectar conta correta**.
+- [ ] Checar integridade de todos os arquivos migrados com hashes, especialmente ZIPs grandes; tamanhos iguais não bastam para comprovar integridade.
+- [ ] Considerar migração concluída somente após verificação e restauração de acesso sem a conta antiga.
