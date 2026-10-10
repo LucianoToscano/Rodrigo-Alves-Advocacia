@@ -1,5 +1,5 @@
 import {SIGNIN, createSession, configured, durationSeconds, isAllowedDestination,
-  loginPage, privacyHeaders, secureCookie, unavailable, validPassword} from './portal-shared.ts';
+  loginPage, privacyHeaders, secureCookie, unavailable, validPassword} from '../lib/portal-shared.ts';
 
 export default async function portalLogin(request: Request): Promise<Response> {
   try {

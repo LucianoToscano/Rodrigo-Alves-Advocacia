@@ -1,5 +1,5 @@
 import {COOKIE_NAME, SIGNIN, SIGNOUT, PUBLIC_LOGO, PUBLIC_TOGGLE, configured, durationSeconds,
-  isAllowedDestination, loginPage, unavailable, validSession, clearedCookie, privacyHeaders} from './portal-shared.ts';
+  isAllowedDestination, loginPage, unavailable, validSession, clearedCookie, privacyHeaders} from '../lib/portal-shared.ts';
 
 // Important: this MUST be installed on /*, including images, JSON, scripts, and internal routes.
 export default async function portalGuard(request: Request, context: any): Promise<Response | void> {
