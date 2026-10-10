@@ -9,3 +9,9 @@
 .ra-private-exit button{font:600 11px/1.25 system-ui,sans-serif;letter-spacing:.015em;padding:10px 14px;border:1px solid rgba(218,199,152,.62);border-radius:3px;background:#0b2730ee;color:#f2e6cf;box-shadow:0 8px 24px rgba(0,0,0,.18);cursor:pointer}
 .ra-private-exit button:hover,.ra-private-exit button:focus-visible{background:#183b43;outline:2px solid #c5a979;outline-offset:2px}
 @media(max-width:480px){.ra-private-exit{left:8px;bottom:8px}.ra-private-exit button{padding:9px;font-size:10px}}
+
+/* V3.5: home contact via canais oficiais enquanto Netlify Forms desativado. */
+.ra-contact-direct-actions {display:grid;gap:12px;margin-top:22px}
+.ra-contact-direct-actions .btn {display:flex;align-items:center;justify-content:center;text-align:center;min-height:48px;white-space:normal}
+.ra-contact-direct-notice {margin:20px 0 0;font-size:.82rem;line-height:1.6;color:#596d70}
+.ra-contact-direct-notice a {text-decoration:underline;text-underline-offset:3px}

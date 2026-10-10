@@ -22,7 +22,7 @@ export default async function portalLogin(request: Request): Promise<Response> {
 }
 // Netlify's platform-enforced IP rate limit is critical; do not remove it.
 export const config = {
-  path:SIGNIN,
+  path:'/__acesso/entrar', // MUST be a literal for Netlify's static config parser
   method:'POST',
   onError:'fail',
   rateLimit:{windowLimit:5,windowSize:60,aggregateBy:['ip','domain']},

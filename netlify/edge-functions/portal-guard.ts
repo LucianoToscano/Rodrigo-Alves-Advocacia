@@ -45,4 +45,5 @@ export default async function portalGuard(request: Request, context: any): Promi
     return unavailable(); // Never allow a failed check to fall through to public content.
   }
 }
-export const config = {path:'/*',onError:'fail'};
+// Guard route is declared exclusively in netlify.toml (before the login function).
+// The default Netlify error handling fails closed, never bypasses this guard.

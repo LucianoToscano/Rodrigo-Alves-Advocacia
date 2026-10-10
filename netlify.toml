@@ -7,7 +7,6 @@
   function = "portal-guard"
   path = "/*"
 
-# Rate limiting is declared in portal-login.ts (Netlify does not read rateLimit from TOML).
-[[edge_functions]]
-  function = "portal-login"
-  path = "/__acesso/entrar"
+# Login is configured INLINE in portal-login.ts, required for platform rate limiting.
+# Do not duplicate the function declaration: TOML declarations run before inline declarations.
+# The guard is the only TOML edge declaration, guaranteeing it runs before the login handler.
