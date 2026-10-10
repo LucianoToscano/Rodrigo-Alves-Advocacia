@@ -38,3 +38,12 @@ A conexão Google Drive foi testada novamente e retornou o perfil **Luciano Tosc
 **Documento de entrada atual e revisável:** https://docs.google.com/document/d/1AERhMQ1o0FvcndFFPbEVZGfoAhO0H9rH5VuN8ryhtZg/edit
 **Registro de revisões e comentários:** https://docs.google.com/document/d/1aJ1wo0MtSKLI-dvLZhSQdZZ-I0UKfQzCqPVN3mxqJGg/edit
 Esses dois documentos nativos foram criados e verificados dentro da nova pasta `02_DOCUMENTACAO_E_PROMPT`. Um comentário de teste foi criado, lido e resolvido. O guia V3.3 copiado em DOCX continua **histórico** e conserva endereços antigos; não usá-lo como destino de futuras gravações. O acesso do GPT de Rodrigo a comentários deve ser testado na conta dele; nenhum segredo ou documento de cliente deve ser registrado nesses arquivos compartilhados.
+
+
+## Proteção da aparência do Dr. Rodrigo — Acervo 07 (10/10/2026)
+Referências curadas: https://drive.google.com/drive/folders/1vbONFn8yQ-v8fftBmH3yf9dTGVaPv45i
+Guia obrigatório de fisionomia e estilo: https://docs.google.com/document/d/1awl4cnyqQkGYayJBPPhvumm1XOtIFAhtAtbXEcsIW4w/edit
+Inventário inicial: 58 imagens JPG e um desktop.ini; 0 imagens JPG idênticas no SHA-256, vários fotogramas quase iguais.
+Seleção: 20 imagens (10 naturais históricas, 7 de óculos/ângulos/perfil, 3 editoriais APENAS de estilo, nunca de fisionomia); 38 imagens redundantes/menos úteis e desktop.ini foram movidos reversivelmente para arquivo: https://drive.google.com/drive/folders/1kF2TthAezpQ8LtauuE6zXqGt8fsu_NW7 . Nenhuma foto foi apagada definitivamente, e os três retratos institucionais aprovados do site V3.3 permanecem idênticos.
+Nunca modificar feições, idade aparente atual, sobrancelhas, olhos, nariz, boca, cabelo, barba, proporções ou tom natural de pele. Referência de rosto: fotos NATURAIS atuais expressamente aprovadas pelo advogado; fotos antigas só como apoio histórico; peças editoriais somente como referência de composição, não biométrica. As fotos do rosto precisam de revisão de Rodrigo antes da publicação. Não tomar imagens com outras marcas como prova da aparência dele.
+A pasta compartilha acesso de Comentador por link; verificar autorização de acesso a retratos. Não houve alteração no Netlify, SSO, website ou branch main.
