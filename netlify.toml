@@ -1,0 +1,26 @@
+[build]
+  publish = "site"
+
+# All routes including CSS/JS/JSON/photos MUST pass through this fail-closed gate.
+# The original logo is the sole publicly readable media asset for the password screen.
+[[edge_functions]]
+  function = "portal-guard"
+  path = "/*"
+
+# Login is configured INLINE in portal-login.ts, required for platform rate limiting.
+# Do not duplicate the function declaration: TOML declarations run before inline declarations.
+# The guard is the only TOML edge declaration, guaranteeing it runs before the login handler.
+
+# Validate the complete portal test suite before both preview and production deploys.
+[context.deploy-preview]
+  command = "node --experimental-strip-types --test tests/*.mjs"
+
+[context.deploy-preview.environment]
+  NODE_VERSION = "22"
+
+# A production release cannot publish if regression tests fail.
+[context.production]
+  command = "node --experimental-strip-types --test tests/*.mjs"
+
+[context.production.environment]
+  NODE_VERSION = "22"

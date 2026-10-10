@@ -1,0 +1,49 @@
+/* V6.2 — correção de contraste claro/escuro após auditoria visual do usuário.
+   Em V5, section-soft passou a ter fundo marfim enquanto manteve texto marfim.
+   Esta camada devolve contraste à seção sem alterar cartões de fundo escuro. */
+.section-soft {
+  background-color:#f7f4ee;
+  color:#192d33;
+}
+.section-soft .section-head h2,
+.section-soft .related-section h2,
+.section-soft .ra-inline-links > .container > h2,
+.section-soft .library-source h2,
+.section-soft .step h3 {
+  color:#172b31;
+}
+.section-soft .section-head p,
+.section-soft .step p,
+.section-soft .library-source p,
+.section-soft .related-section > .container > p,
+.section-soft .ra-inline-links > .container > p {
+  color:#45575e;
+}
+.section-soft .eyebrow,
+.section-soft .step-number {
+  color:#815e32;
+}
+.section-soft h2 em,
+.section-soft .section-head em {
+  color:#8b653d;
+}
+.section-soft .step {
+  border-top-color:#d8cbb8;
+}
+.section-soft .section-head .text-link,
+.section-soft .related-links a {
+  color:#65451f;
+}
+.section-soft .related-links a {
+  border-color:#bfae95;
+}
+.section-soft .related-links a:hover,
+.section-soft .related-links a:focus-visible {
+  color:#172b31;
+  border-color:#80613c;
+}
+/* Os cartões editoriais escuros mantêm sua paleta de texto próprio. */
+.section-soft .article-card h3 {color:#f5f2e9;}
+.section-soft .article-card p {color:#b9c8cb;}
+/* Contraste suficiente também nas pequenas labels do fundo claro. */
+.section-soft .tag {color:#76542e;}
