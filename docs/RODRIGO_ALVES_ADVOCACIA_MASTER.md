@@ -57,3 +57,7 @@ Pull Request de documentação **parcial**: https://github.com/LucianoToscano/ro
 
 ## Portal privado V3.4 — 10/10/2026
 Implementado apenas na branch feat/portal-privado-institucional-v34 e PR #3 draft. Base V3.3 preservada (37 HTML, fotografias originais). Edge Functions com login no servidor, sessão 12h, cookie seguro e logout. 20 testes locais aprovados. O Netlify oficial continua com SSO; deploy atual 6aca07e0e41b1e712c726fc0 tem só 1 asset, sem Edge Functions. Senha e chave ainda não configuradas na Netlify; publicação pendente. Manual docs/PORTAL_PRIVADO_IMPLEMENTACAO_V34.md.
+
+
+## V3.7 — checklists temáticos e inclusão digital — 10/10/2026
+Implementado APENAS na branch feat/v37-checklists-acessibilidade, PR #7 draft, sobre V3.6 PR #6. Preservados SSO, Netlify oficial e todos os retratos e logo originais. Evolução dos checklists de 3 para 7 situações sem CPF, upload, coleta ou armazenamento de documentos. Nova página /acessibilidade.html referenciada no rodapé de todas as 39 páginas: texto ampliado, contraste, orientações NVDA/VoiceOver/TalkBack, leitura por voz do navegador e Libras governamental opcional somente por clique explícito com aviso sobre serviço externo e tradução não certificada. 42/42 testes Node locais; 2066 referências locais, 0 URLs internas faltantes, 13 JS com sintaxe válida. Não declarar conformidade WCAG nem aprovação jurídica ou deploy sem validação externa. Manual docs/ACESSIBILIDADE_CHECKLISTS_V37.md; PR #7.

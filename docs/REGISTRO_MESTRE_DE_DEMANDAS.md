@@ -478,3 +478,15 @@ Aprovação do usuário para executar melhorias seguras. **Implementado apenas e
 | UX-008 | CSS isolado para novos componentes, foco, mobile, redução de movimento e impressão | Implementado; WCAG e testes de navegador pendentes |
 | QA-001 | Regressão V3.4/V3.5/V3.6 (33 testes), 38 páginas/1.829 referências locais e 1.251 âncoras | Testes estáticos e Node aprovados; não equivalem a integração Netlify |
 Observação: DEP-004 Netlify Forms é legado do planejamento; decisão V3.5 vigente mantém formulários desabilitados e contato via WhatsApp/e-mail até backend seguro e aprovação específica. SEO permanece noindex durante fase privada. Não duplicar área de clientes, selos oficiais ou verificação real sem backend.
+
+
+## Entradas V3.7 — 10/10/2026 (não publicadas)
+| ID | Objetivo | Estado |
+| --- | --- | --- |
+| UX-009 | Checklists por 7 situações e opção imprimir/PDF do navegador | Implementado em branch PR #7; testes locais; revisão jurídica e mobile pendentes |
+| A11Y-001 | Página Acessibilidade com instruções de leitor de tela e comunicação escrita | Implementado em PR #7, sem certificado WCAG |
+| A11Y-002 | Preferências visuais de texto e contraste, sem dados pessoais | Implementado em PR #7; QA visual e localStorage/documentação pendentes |
+| A11Y-003 | Leitura em voz do navegador (iniciar/parar), alternativa textual | Implementado em PR #7; validar Chrome/Safari/mobile |
+| A11Y-004 | VLibras opcional carregado somente após ação | Em PR #7; **pendente de homologação de terceiros, privacidade, rede e revisão por usuário surdo** |
+| QA-002 | Testes regressivos de navegação e listas | 42/42 Node, 39 HTML, 2066 refs locais; não substituem navegador/leitor de tela |
+Relação entre os PRs: #2 base V3.3, #3 V3.5 autenticada, #6 V3.6, #7 V3.7. Não mexer em SSO/produção antes de homologação. Listas não são documentação obrigatória universal, nem ferramenta de decisão jurídica.

@@ -83,3 +83,15 @@ Atualizado 2026-10-10. `[x]` significa validação local documentada em etapa an
 - [ ] Revisão OAB/LGPD, direitos de mídia e 12 conteúdos do Instagram pelo profissional.
 - [ ] Aprovação e merge sequencial PR #2 → PR #3 → PR #6; registro de commit e rollback; NÃO alterar Netlify oficial até homologação.
 Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar reativação automática só porque o checklist V3.2 antigo dizia DEP-004 P0.
+
+
+## Checklist V3.7 — 10/10/2026
+- [x] Evoluir organizador de 3 para 7 situações, preservando os 3 existentes e impressão PDF pelo navegador.
+- [x] Ligar as sete situações de Por onde começar? às listas temáticas com código allowlisted.
+- [x] Página Acessibilidade com instruções de teclado, leitores de tela, leitura por voz local e comunicação escrita.
+- [x] Contraste e aumento do texto, preferência apenas no navegador; privacidade atualizada.
+- [x] VLibras opcional sob clique e aviso de serviço externo, com alternativa de link oficial.
+- [x] Testar 42 casos Node, links internos, 39 páginas, JS e hashes de quatro imagens.
+- [ ] Testar fisicamente NVDA, VoiceOver e TalkBack, zoom 200%/400%, PDF A4, 320px, contraste e teclado.
+- [ ] Revisar compatibilidade e privacidade externa do VLibras e linguagem jurídica com pessoa surda ou especialista em Libras.
+- [ ] Validar no Netlify oficial (SSO ainda ativo) o portal e as URLs/permalinks históricos; depois submeter PRs #2, #3, #6 e #7 por ordem.

@@ -15,3 +15,7 @@
 | Login Gov.br | Integração restrita C | Não usar como login para site privado sem elegibilidade |
 
 Não há chaves secretas na base pública. Consultas externas devem obedecer aos termos dos provedores. O projeto institucional de selos profissionais permanece separado.
+
+
+## V3.7 — recurso inclusivo opcional
+VLibras (suíte oficial do Governo Digital) foi inserido em PR #7 como widget de terceiros **exclusivamente sob ação voluntária na página acessibilidade.html**, com aviso de processamento externo, possibilidade de falha e referência alternativa à página oficial. O script não é carregado automaticamente. Integração em código não equivale a autorização de uso de dados nem teste de rede real; antes de publicar revisar CSP, tratamento de dados, LGPD e precisão de conceitos jurídicos em Libras. O serviço não substitui intérprete. Controles de contraste/ampliação são locais no browser, sem dados pessoais.
