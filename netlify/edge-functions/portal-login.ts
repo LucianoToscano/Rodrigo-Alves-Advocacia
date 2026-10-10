@@ -19,7 +19,7 @@ export default async function portalLogin(request: Request): Promise<Response> {
     if (!isSameOriginSubmission(request) &&
         !(await validLoginCsrf(request.headers.get('cookie'), params.get('csrf'), url.host))) {
       // Do not expose a blank 403 page: issue a fresh cookie and signed form for retry.
-      return await loginPage(destination, false, url.host);
+      return await loginPage(destination, false, url.host, true);
     }
     if (!(await validPassword(params.get('senha') || ''))) return await loginPage(destination,true,url.host);
     const cookie = secureCookie(await createSession(url.host,duration),duration);
