@@ -16,3 +16,5 @@ As aprovações institucionais foram relatadas pelo usuário; não são assinatu
 | 2026-10-10 | SEC-003/004/005/006/007 aprovadas **para estudo**, não para implantação direta | Requer segurança, LGPD e decisão específica sobre backend e operações | SEC-003/004/005/006/007 |
 
 **Nota complementar:** `TASK-003` era uma demanda derivada do equívoco sobre controles de prompts; retirada do backlog ativo e ID reservado no histórico. A acessibilidade geral do website permanece coberta por auditorias de UX/QA, independente dessa interface.
+
+- **2026-10-10 — AVR-001:** desenvolver em revisão um guia ilustrado animado com o personagem do material enviado, sem apresentar a ilustração como advogado real ou atendimento ao vivo. Não habilitar IA, coleta de dados ou publicação sem QA.

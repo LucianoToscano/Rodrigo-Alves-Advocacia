@@ -63,3 +63,6 @@ Criadas Netlify Edge Functions (guarda geral, login limitado, sessão HMAC) e JS
 - `site/ferramentas/organizar-documentos.html` de 3 para 7 temas; marcações em memória e impressão nativa/PDF, sem entrada de dados pessoais.
 - Ligações da orientação V3.6 aos checklists via código de assunto em URL. Testes tests/test-v37.mjs, 42/42 aprovados no conjunto.
 - Conservadas imagens, portal privado, SSO e branch main. PR #7 draft pendente de QA real, LGPD/OAB e homologação externa.
+
+## AVR-001 — 10/10/2026 — Assistente Rodrigo na branch de revisão
+Sete poses do desenho enviado, painel de navegação por Previdência, BPC, Saúde, Golpes e Contato, CSS/JS progressivos e testes estáticos. Sem IA, coleta pessoal, merge ou deploy. QA visual bloqueado no navegador de desenvolvimento, aguardando homologação. Ver `ASSISTENTE_VIRTUAL_RODRIGO_V1.md`.

@@ -1,0 +1,26 @@
+/* Componente independente e reversível: não altera a paleta ou layout base. */
+.ra-assistente{position:fixed;bottom:106px;right:20px;z-index:110;font-family:var(--body,system-ui,sans-serif);font-size:14px;color:#f6f2e9;line-height:1.48;pointer-events:none}
+.ra-assistente button,.ra-assistente a{font-family:inherit}
+.ra-a-launch{position:relative;display:flex;align-items:flex-end;gap:3px;min-width:122px;min-height:120px;padding:0;border:0;background:transparent;color:#f5ebd9;pointer-events:auto;filter:drop-shadow(0 7px 10px rgba(0,0,0,.35))}
+.ra-a-image{display:block;flex:none;width:118px;height:178px;background-image:url('../img/assistente-rodrigo-poses.webp');background-repeat:no-repeat;background-size:826px 178px;background-position:0 0;transform-origin:center bottom;animation:ra-a-bob 4.7s ease-in-out infinite}
+.ra-a-image[data-pose="0"]{background-position:0 0}.ra-a-image[data-pose="1"]{background-position:-118px 0}.ra-a-image[data-pose="2"]{background-position:-236px 0}.ra-a-image[data-pose="3"]{background-position:-354px 0}.ra-a-image[data-pose="4"]{background-position:-472px 0}.ra-a-image[data-pose="5"]{background-position:-590px 0}.ra-a-image[data-pose="6"]{background-position:-708px 0}
+.ra-a-label{position:absolute;right:102px;bottom:80px;display:block;min-width:115px;border:1px solid #bba477;border-radius:12px 12px 3px 12px;padding:9px 11px;background:#102831;color:#f8f0df;box-shadow:0 7px 22px #0005;font-size:12px;font-weight:700;line-height:1.25;text-align:center}
+.ra-a-launch:hover .ra-a-label,.ra-a-launch:focus-visible .ra-a-label{background:#203c42}
+.ra-a-launch:focus-visible{outline:3px solid #e5bb73;outline-offset:3px;border-radius:8px}
+.ra-a-panel{position:absolute;right:10px;bottom:186px;pointer-events:auto;width:min(390px,calc(100vw - 28px));max-height:min(66vh,580px);display:flex;flex-direction:column;overflow:hidden;color:#10242a;background:#fcf9f2;border:1px solid #c4aa7e;border-radius:15px;box-shadow:0 19px 60px #0008}
+.ra-a-header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:17px 19px;color:#f3eee4;background:linear-gradient(125deg,#0d2129,#163942)}
+.ra-a-header strong{display:block;font-family:Georgia,serif;font-size:20px;line-height:1.25;font-weight:500}.ra-a-header span{display:block;font-size:11px;color:#dfdacd;margin-top:5px}
+.ra-a-x{border:1px solid #ffffff44;border-radius:8px;padding:0 10px;color:#f5ede0;background:#ffffff12;font-size:24px;line-height:31px}
+.ra-a-scroll{padding:17px 18px;overflow-y:auto;overscroll-behavior:contain;min-height:100px}.ra-a-message{margin:0 0 13px;font-size:14px;color:#263e45}.ra-a-topic{font-family:Georgia,serif;font-size:22px;color:#0c262d;margin:4px 0 12px}
+.ra-a-options,.ra-a-links{display:grid;gap:8px}.ra-a-option,.ra-a-link{display:block;width:100%;border:1px solid #d7c7a6;border-radius:9px;padding:11px 12px;background:#fffdfa;color:#193138;text-align:left;font-size:13px;font-weight:700;text-decoration:none;line-height:1.35}
+.ra-a-option:hover,.ra-a-link:hover,.ra-a-option:focus-visible,.ra-a-link:focus-visible{background:#eae6da;border-color:#a58a58;color:#112931}
+.ra-a-back{background:none;border:0;padding:3px 0 8px;color:#70542d;text-decoration:underline;text-underline-offset:3px;font-weight:700;font-size:12px}
+.ra-a-note{margin:12px 0 0;color:#4d6066;font-size:11px;line-height:1.5}
+.ra-a-footer{display:flex;align-items:center;gap:9px;justify-content:space-between;padding:10px 18px;border-top:1px solid #ddd3c3;font-size:10px;color:#455d62;line-height:1.3}
+.ra-a-footer button{min-width:110px;padding:6px 4px;border:1px solid #b7a17b;border-radius:6px;background:transparent;color:#14313b;font-size:10px;font-weight:700}
+.ra-assistente.ra-a-paused .ra-a-image{animation:none;transition:none}
+@keyframes ra-a-bob{0%,100%{transform:translateY(0)}45%{transform:translateY(-4px)}}
+@media(max-width:600px){.ra-assistente{right:7px;bottom:75px}.ra-a-image{transform:scale(.8);transform-origin:right bottom}.ra-a-launch{min-width:96px;min-height:140px}.ra-a-label{right:91px;bottom:70px;min-width:100px;padding:7px;font-size:11px}.ra-a-panel{right:5px;bottom:158px;max-height:min(60vh,500px);width:min(370px,calc(100vw - 24px))}}
+@media(max-height:640px){.ra-a-panel{max-height:50vh;bottom:160px}}
+@media(prefers-reduced-motion:reduce){.ra-a-image{animation:none!important;transition:none!important}}
+@media print{.ra-assistente{display:none!important}}

@@ -122,3 +122,9 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [x] **DOC-007** [P0] Preparar runbook detalhado de liberação e reversão — `docs/PLANO_LIBERACAO_SOMENTE_SENHA_20261010.md`, **nenhuma desproteção executada**.
 
 **Estado operacional: NO-GO para remover SSO.** `main` ainda tem deploy antigo sem guard. Não considerar um teste em preview como autorização para tornar todos os permalinks públicos.
+
+### AVR-001 — Assistente Rodrigo
+- [x] Criar componente isolado a partir de ilustração fornecida, sem alterar fotografias, portal ou SSO.
+- [x] Preparar orientação educativa, redução de movimento, pausa e tecla Escape.
+- [ ] Executar QA real em mobile e desktop, leitores de tela e sobreposição de componentes.
+- [ ] Aprovar editorial e uso institucional das poses; revisar PR antes de merge/deploy.
