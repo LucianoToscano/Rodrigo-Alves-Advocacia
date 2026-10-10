@@ -44,3 +44,13 @@ Concluído em branch **feat/v36-orientacao-conteudo-seguranca** e PR #6 draft, c
 ## Atualização V3.7 — acessibilidade e checklists
 Concluído em código (PR #7 draft): sete checklists de organização por situação com impressão/PDF local; atalhos nos sete cartões de orientação; página de acessibilidade para pessoas cegas/baixa visão/surdas/dificuldade motora; alto contraste e ampliação; voz opcional do navegador e VLibras externo apenas após clique. Testes Node 42/42, 39 HTML, 2066 refs válidas, fotos originais intactas. Não publicado.
 Próximo P0: validação Netlify Edge/SSO, todas URLs antigas, segurança de sessão, qualidade visual e teclado/leitor de tela; revisão jurídica das sete listas e processamento externo VLibras antes de efetivar qualquer integração em produção. Avaliar com usuários reais e intérprete humano quando apropriado.
+
+### AVR-001 — Assistente Rodrigo (P1)
+Fase 1: versão ilustrada e guiada em branch isolada (implementada, sem deploy). Fase 2: homologação visual, acessibilidade, aprovação e deploy autorizado. Fase 3 opcional: inteligência conversacional e voz, somente após arquitetura segura/LGPD e avaliação jurídica; não integra a V1.
+
+### AVR-001 V2 — Próxima homologação
+V2 preparada com 10 imagens e movimento autônomo; validar UI real em dispositivos móveis e desktop, reduzir eventuais saltos entre poses e confirmar compatibilidade com portal privado. Sem qualquer mudança em Netlify ou publicação antes de aprovação.
+
+
+### AVR-001 — Etapa V3
+Base V3 de animação contínua preparada no PR #10; validar sob proteção SSO em preview e dispositivos reais. Após homologação, considerar apenas mediante autorização um rig profissional em camadas para giros reais do rosto e caminhada articulada (Rive/Live2D); a V3 não afirma possuir essa tecnologia.

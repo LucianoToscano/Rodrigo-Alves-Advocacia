@@ -63,3 +63,27 @@ Criadas Netlify Edge Functions (guarda geral, login limitado, sessão HMAC) e JS
 - `site/ferramentas/organizar-documentos.html` de 3 para 7 temas; marcações em memória e impressão nativa/PDF, sem entrada de dados pessoais.
 - Ligações da orientação V3.6 aos checklists via código de assunto em URL. Testes tests/test-v37.mjs, 42/42 aprovados no conjunto.
 - Conservadas imagens, portal privado, SSO e branch main. PR #7 draft pendente de QA real, LGPD/OAB e homologação externa.
+
+## AVR-001 — 10/10/2026 — Assistente Rodrigo na branch de revisão
+Sete poses do desenho enviado, painel de navegação por Previdência, BPC, Saúde, Golpes e Contato, CSS/JS progressivos e testes estáticos. Sem IA, coleta pessoal, merge ou deploy. QA visual bloqueado no navegador de desenvolvimento, aguardando homologação. Ver `ASSISTENTE_VIRTUAL_RODRIGO_V1.md`.
+
+## AVR-001 V2 — 10/10/2026 (branch de revisão)
+Alterado assistente V1 para V2 com 10 poses individuais com transparência, alternância autônoma de expressões, passos curtos em desktop, balanço corporal discreto e controle de pausa. Mantidos menus de informação e política sem coleta. Criados `tests/test-assistente-v2.mjs` e documentação V2. Testes Node passaram; homologação visual pendente. **Não publicado**.
+
+
+## AVR-001 V3 — 10/10/2026 — movimento contínuo em revisão
+- Substituído o slideshow V2 por uma só imagem de alta definição com transparência sem perdas e deformação suave contínua (WebGL2 / fallback Canvas 2D).
+- Reduzido asset ativo para 467 KB sem alteração de pixels em relação ao PNG da V3.
+- Novo CSS/JS independente, painel responsivo, cinco orientações locais, pausa, teclado e movimento reduzido.
+- Testes históricos V1/V2 adaptados para verificar regressões relevantes; adicionado `test-assistente-v3.mjs`.
+- Testes Chromium isolados em desktop e telas 390/320 px: abrir/fechar painel, link educativo, pausa e Escape passaram. Ambiente bloqueou navegação por localhost; homologação no site real permanece pendente.
+- Sem merge, deploy, alteração de conteúdo institucional, login, SSO, Edge Functions ou Netlify Forms.
+
+
+## 2026-10-10 — AVR-001 suspenso, assistente oculto
+- Usuário solicitou deixar assistente Rodrigo desligado por enquanto e retomar melhorias futuramente.
+- Desabilitado o carregamento em `site/assets/js/site.js` por flag `ASSISTENTE_RODRIGO_ATIVO = false`. Sem injeção de CSS, JS do widget ou DOM do personagem.
+- Arquivos, documentação, imagens e testes preservados na branch PR #10 (rascunho). Sem merge na `main`, sem mudança no portal privado/Netlify SSO.
+
+## AVR-001 — suspensão reforçada (10/10/2026)
+Removido o autocarregador do assistente do `site/assets/js/site.js` na branch PR #10. JS, CSS e imagens do assistente permanecem no repositório, porém não são carregados nem mostrados. Ajustados testes para assegurar inatividade. A prévia da Netlify só refletirá a alteração após um build bem-sucedido; nenhum deploy em produção.

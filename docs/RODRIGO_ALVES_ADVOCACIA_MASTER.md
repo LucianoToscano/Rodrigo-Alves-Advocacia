@@ -81,3 +81,22 @@ A pasta compartilha acesso de Comentador por link; verificar autorização de ac
 
 ### Revisão final de procedência e fotos WebP aprovadas
 As imagens de vídeo de 2025 com a identificação visual de outro perfil (alvesdiasadvogados) foram separadas em https://drive.google.com/drive/folders/1b0m1Dyg6qhLQ0O_yfVUbGHz9DJmAsEfb . Sua titularidade deve ser confirmada por Rodrigo ANTES de considerá-las referência facial. O total da pasta 07 é: 17 imagens selecionadas por uso (10 naturais históricas, 4 óculos/perfil, 3 EDITORIAIS SOMENTE ESTILO) e três fotografias WebP institucionais aprovadas do site V3.3, que estão agora disponíveis diretamente em https://drive.google.com/drive/folders/1Af0mtqOJOi2aB9WBA4Lv5EC9G9qf190H (arquivos, MIME e tamanho preservados). Painel visual das 17 selecionadas: https://drive.google.com/file/d/1Nc5W0SZiOQQ4nBy5hmyHlfmMUSOuC_nF/view . A triagem de descartes guarda 42 itens (41 JPG e desktop.ini), nenhum excluído definitivamente. Sempre seguir o guia atualizado https://docs.google.com/document/d/1awl4cnyqQkGYayJBPPhvumm1XOtIFAhtAtbXEcsIW4w/edit e pedir ao advogado retratos naturais recentes validados antes de gerar uma imagem oficial.
+
+
+## AVR-001 — Assistente Rodrigo ilustrado (10/10/2026)
+Implementação experimental na branch `feat/assistente-rodrigo-animado-v1`, sem publicação. Sete poses derivadas de ilustração fornecida, orientador local com cinco temas e links internos. Não utiliza IA, backend ou coleta. Respeita movimento reduzido e botão de pausa. Necessário homologar visual, acessibilidade, conteúdo e aprovação editorial antes de mesclar. Ver `docs/ASSISTENTE_VIRTUAL_RODRIGO_V1.md`.
+
+
+### AVR-001 — Atualização V2 (10/10/2026)
+Assistente ilustrado autônomo com **10 poses reais da última montagem fornecida**, fundo transparente WebP, animação CSS/JS com respiração, transições entre expressões e caminhadas curtas apenas no desktop. Integração em branch de revisão, sem IA, coleta de dados, merge ou publicação. Testes estáticos Node 3/3; testes reais em navegador bloqueados por `ERR_BLOCKED_BY_ADMINISTRATOR`. Consulte `docs/ASSISTENTE_VIRTUAL_RODRIGO_V2.md`.
+
+
+### AVR-001 V3 — Integração contínua de alta definição (10/10/2026)
+O assistente guia ilustrado agora usa **uma única imagem WebP lossless RGBA de 811×1506 px**, pixel a pixel idêntica ao recorte aprovado (467 KB), renderização contínua por WebGL2 ou Canvas 2D como alternativa, sem alternância de poses. Scripts e estilos permanecem isolados e carregados pelo `site.js` pré-existente. Os cinco assuntos e links informativos foram preservados. Testes de interação isolados em Chromium em 1440/390/320 px passaram, sem erro JavaScript ou overflow; teste de domínio real, leitores de tela, dispositivo físico e QA de produção ainda pendentes. PR #10 draft, sem merge ou mudança na Netlify. Ver `docs/ASSISTENTE_VIRTUAL_RODRIGO_V3.md`.
+
+
+### AVR-001 — decisão atual: OCULTO E DESATIVADO (10/10/2026)
+Por solicitação expressa do usuário, o assistente animado Rodrigo V3 foi colocado em espera. O carregamento em `site/assets/js/site.js` possui flag fixa `ASSISTENTE_RODRIGO_ATIVO = false`, impedindo exibição e inicialização do componente. Preservados personagem HD, código, testes e documentação na branch de revisão PR #10. **Não reativar nem publicar** até novo pedido. A `main` e as configurações Netlify/SSO permanecem intactas.
+
+### AVR-001 — decisão reforçada após evidência visual de prévia antiga (10/10/2026)
+O componente deve permanecer **desligado e invisível**. Como a prévia falhou no build e ainda mostrava o boneco, removido o autocarregador de `site.js` na branch de revisão (em vez de apenas retornar com flag falsa). Assets preservados para continuidade posterior. `main` não continha o assistente. Requer verificação posterior do deploy-preview bem-sucedido antes de declarar que a prévia está corrigida.

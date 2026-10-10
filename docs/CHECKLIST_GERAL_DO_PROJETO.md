@@ -122,3 +122,39 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [x] **DOC-007** [P0] Preparar runbook detalhado de liberação e reversão — `docs/PLANO_LIBERACAO_SOMENTE_SENHA_20261010.md`, **nenhuma desproteção executada**.
 
 **Estado operacional: NO-GO para remover SSO.** `main` ainda tem deploy antigo sem guard. Não considerar um teste em preview como autorização para tornar todos os permalinks públicos.
+
+### AVR-001 — Assistente Rodrigo
+- [x] Criar componente isolado a partir de ilustração fornecida, sem alterar fotografias, portal ou SSO.
+- [x] Preparar orientação educativa, redução de movimento, pausa e tecla Escape.
+- [ ] Executar QA real em mobile e desktop, leitores de tela e sobreposição de componentes.
+- [ ] Aprovar editorial e uso institucional das poses; revisar PR antes de merge/deploy.
+
+### AVR-001 V2 — Movimento automático
+- [x] Recortar dez poses reais do último material existente, sem solicitar nem gerar novas imagens.
+- [x] Criar loop autônomo de expressões e pequenas caminhadas, respeitando movimento reduzido e pausa voluntária.
+- [x] Executar verificações estáticas e testes Node V2 (3/3).
+- [ ] Homologar movimento fluido sem tremores em navegadores e celulares reais.
+- [ ] Revisar possíveis sobreposições com WhatsApp, banner de consentimento e saída do portal.
+- [ ] Aprovar uso institucional das ilustrações e dos textos antes de merge/deploy.
+
+
+### AVR-001 V3 — integração no site em revisão
+- [x] Preservar fotos e marca existentes, utilizar só a imagem fornecida e recortada, sem gerar novo rosto.
+- [x] Integrar no loader global existente com CSS/JS isolados, sem modificar páginas institucionais.
+- [x] Substituir alternância de imagens por movimento contínuo; WebGL2 com fallback Canvas 2D e PNG/WebP sem perdas.
+- [x] Testar interface isolada em Chromium 1440, 390 e 320 px; sem overflow horizontal ou erros de página observados.
+- [ ] Executar testes integrais na branch (Netlify deploy preview protegido e dispositivos reais) e validar desempenho/acessibilidade com leitores de tela.
+- [ ] Rever sobreposição com cookies, WhatsApp, banner, botão sair e telas de menor altura.
+- [ ] Obter revisão visual e editorial antes de liberar deploy/merge.
+
+
+### AVR-001 — suspensão temporária aprovada
+- [x] Registrar solicitação de desativação e manter histórico, imagens, código e demais recursos.
+- [x] Aplicar bloqueio explícito no carregamento do assistente para que permaneça oculto na prévia.
+- [ ] Validar build de prévia após commit e conferir que o personagem não aparece no domínio de homologação.
+- [ ] Retomar refinamento de rigging, nitidez e naturalidade apenas quando solicitado.
+
+### AVR-001 — confirmação extra de inatividade
+- [x] Excluir completamente o autocarregador de `site/assets/js/site.js` na branch do PR #10, conservando os arquivos do personagem.
+- [x] Adequar testes automatizados para falhar caso o carregador seja reintroduzido.
+- [ ] Confirmar build Netlify bem-sucedido e ausência do personagem no endereço exato do usuário; não afirmar isso antes de testar.
