@@ -173,4 +173,28 @@
   button.setAttribute('aria-label', 'Encerrar acesso privado e voltar para a tela de senha');
   form.appendChild(button);
   document.body.appendChild(form);
+  // The signed logout token is obtained only after authentication, on this same origin.
+  // Never read or expose the HttpOnly session cookie to JavaScript.
+  form.addEventListener('submit', async event => {
+    event.preventDefault();
+    button.disabled = true;
+    try {
+      const response = await fetch('/__acesso/saida-token', {
+        method: 'GET', credentials: 'same-origin', cache: 'no-store',
+        headers: {Accept: 'application/json'}
+      });
+      if (!response.ok) throw new Error('Token não disponível');
+      const data = await response.json();
+      if (typeof data.token !== 'string' || !/^[A-Za-z0-9_-]{43}$/.test(data.token)) throw new Error('Token inválido');
+      const hidden = document.createElement('input');
+      hidden.type = 'hidden';
+      hidden.name = 'csrf';
+      hidden.value = data.token;
+      form.appendChild(hidden);
+      form.submit();
+    } catch {
+      button.disabled = false;
+      button.textContent = 'Tente sair novamente';
+    }
+  });
 })();
