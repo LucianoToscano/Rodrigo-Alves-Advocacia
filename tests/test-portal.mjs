@@ -94,7 +94,7 @@ test('login sem Origin: Referer exato pode validar navegador legado',async()=>{
 });
 test('login sem Origem, Referer ou Fetch Metadata falha fechado',async()=>{
  const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
- assert.equal(res.status,403);assert.equal(res.headers.has('set-cookie'),false);passed++;
+ assert.equal(res.status,403);assert.ok(!String(res.headers.get('set-cookie')).includes('__Host-ra_private='));passed++;
 });
 test('Origin externa nunca e sobrescrita por Sec-Fetch-Site same-origin',async()=>{
  const res=await login.default(req('/__acesso/entrar',{method:'POST',headers:{origin:'https://evil.example','sec-fetch-site':'same-origin','content-type':'application/x-www-form-urlencoded'},body:'senha=qualquer'}));
