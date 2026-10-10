@@ -45,3 +45,15 @@ Atualizado 2026-10-10. `[x]` significa validação local documentada em etapa an
 - [ ] **LEG-002** [P0] Revisar normas publicitárias OAB na publicação — Planejada; Conferir regras vigentes e textos definitivos.
 - [ ] **TASK-001** [P2] Calculadoras previdenciárias com tabelas versionadas — Adiada; Validar fontes, fórmulas, limites e testes.
 - [ ] **TASK-002** [P1] Área do cliente com atualização individual de caso — Bloqueada; Definir provedor seguro, perfis e testes isolamento.
+
+
+## Checklist de retomada V3.3 — 10/10/2026
+- [x] Localizar e extrair ZIP V3.3 final no Drive; verificar integridade de 72 arquivos.
+- [x] Validar 37 páginas HTML, 1.748 referências locais, 9 scripts e atributos básicos de acessibilidade.
+- [x] Comparar os três retratos aos aprovados na V3.2 (arquivos idênticos).
+- [x] Recuperar `site/` e documentos em branch GitHub isolada; comparação exata do SHA da árvore Git com diretório extraído.
+- [x] Confirmar SSO e Forms desabilitado nos dois Netlify; não modificar hospedagens.
+- [ ] Conferir PR draft e solicitar revisão antes de merge na main.
+- [ ] Verificar com navegador autorizado a versão servida no Netlify demo e se equivale à V3.3.
+- [ ] Homologar desktop/mobile 320–375px, menus, cookies, Central de Segurança, cartão, acervo e clique WhatsApp.
+- [ ] Revisar LGPD, segurança, conteúdo jurídico e aprovação final antes de abrir ao público.

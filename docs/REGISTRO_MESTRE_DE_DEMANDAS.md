@@ -445,3 +445,13 @@ Regra: ID não é reutilizado; aprovação ≠ implementação ≠ validação. 
 ## Nota de governança sobre as quatro demandas avançadas (correção V3.2)
 
 As demandas `SEC-006` (Área do Cliente), `SEC-004` + `SEC-005` (cobranças e documentos), `SEC-003` (denúncias confidenciais) e `SEC-007` (administração de canais) foram **aprovadas para análise de viabilidade**, não para implantação imediata. É obrigatória, antes de desenvolver componentes operacionais, uma decisão documentada sobre autenticação, autorização, segurança, LGPD, retenção, fornecedores e testes de isolamento. Nunca usar dados reais de clientes em testes. `TASK-002` trata acompanhamento individual e depende de `SEC-006`, não é uma segunda Área do Cliente.
+
+
+## Retomada operacional V3.3 — registros auditáveis de 10/10/2026
+| ID | Status desta revisão | Evidência e próxima ação |
+| --- | --- | --- |
+| DEP-001 | **Sincronizado em branch de revisão**, não mesclado | 72 arquivos de `site/` e docs no ramo `chore/recuperacao-v33-20261010`; árvore `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2` idêntica ao pacote V3.3 local. PR draft/QA ainda pendentes. |
+| DEP-002 | Proteção reconfirmada, sem mudança | Oficial e demo Netlify requerem SSO. Forms desabilitado. |
+| DEP-003 | **Homologação pendente** | Deploy demo `6aca2f8346e0a16fb3c6a76d` ready/manual, não comprovado como V3.3. |
+| QA-001 | Auditoria estática concluída | 37 HTML, 1.748 referências locais válidas, nove JS com sintaxe correta, sem IDs duplicados. Chromium bloqueado; testar no Work. |
+| QA-002 | Preservação fotográfica confirmada | Três retratos institucionais idênticos aos da V3.2. |

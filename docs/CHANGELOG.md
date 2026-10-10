@@ -39,8 +39,7 @@ Antes de relacionar a commits reais, obter SHAs e validar comparações.
 - **Netlify:** sem deploy novo.
 
 
-## V3.3 — recuperação e auditoria de 10/10/2026
-- Pacote final V3.3 recuperado do Drive, SHA-256 c9f569271a4e7f4d5debcfe632383b8fadedd798860326cd5c9a64a30f2025a1, 72 arquivos e 37 HTML.
-- V3.2 → V3.3: 7 novos, 40 modificados, zero removidos; três retratos idênticos byte a byte aos aprovados.
-- 1.748 referências locais válidas, 0 IDs duplicados, 9 JS sem erros de sintaxe.
-- GitHub em branch isolada; não houve merge nem alteração Netlify. Navegador Chromium local bloqueado; homologação visual pendente.
+### Conclusão da recuperação do código — 10/10/2026
+- 72 arquivos descompactados e sincronizados no diretório `site/` da branch `chore/recuperacao-v33-20261010`, incluindo 9 WebP preservadas.
+- Árvores Git local/remota idênticas: `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2`.
+- Pacote original preservado em `source/` e projeto `institucional-selos/` segregado. Sem merge, sem novo deploy, sem alteração SSO.

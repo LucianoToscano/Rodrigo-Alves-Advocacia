@@ -18,5 +18,5 @@
 **Nota complementar:** `TASK-003` era uma demanda derivada do equívoco sobre controles de prompts; retirada do backlog ativo e ID reservado no histórico. A acessibilidade geral do website permanece coberta por auditorias de UX/QA, independente dessa interface.
 
 
-## Atualização pós-V3.3 — 10/10/2026
-Site V3.3 final íntegro no Drive (72 arquivos/37 páginas). Hashes dos três retratos idênticos à V3.2. GitHub main só README e PR #1 draft. Branch de recuperação: chore/recuperacao-v33-20261010. Demo Netlify SSO/ready/manual não comprova paridade à V3.3. Testes de navegador reais continuam pendentes após bloqueio Chromium. Não trocar fotos, não ativar Forms/backend nem liberar site oficial sem autorização.
+## Estado de continuidade após importação GitHub V3.3
+Pacote final Drive V3.3 com 72 arquivos/37 páginas. `site/` completo no GitHub em `chore/recuperacao-v33-20261010`, árvore SHA `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2` conferida local e remotamente. Docs e `institucional-selos/` também recuperados. `main` e PR #1 anteriores preservados. Netlify demo SSO, Forms desabilitado, deploy anterior `6aca2f8346e0a16fb3c6a76d`; V3.3 em hospedagem não homologada. Browser Chromium local bloqueado, portanto QA mobile e cliques requer Work/navegador autorizado. Não trocar fotos nem abrir site público sem aprovação.

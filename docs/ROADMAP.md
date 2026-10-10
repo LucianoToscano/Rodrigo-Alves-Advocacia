@@ -20,3 +20,10 @@
 | 4 | SEC-004 / SEC-005 | Verificação de cobrança e documentos emitidos | Exige registros verificáveis, tokens sem informações sigilosas, expiração/revogação, antifraude e revisão jurídica; autorização específica pendente |
 
 **Não implementar por aparência.** Não usar dados reais em testes. O projeto de selos profissionais permanece inteiramente separado em `institucional-selos/`, com documentação e backlog próprios.
+
+
+## Prioridades atualizadas pós-recuperação V3.3 (10/10/2026)
+**P0 concluído em GitHub, não em hospedagem:** importação de 72 arquivos na branch isolada e conferência exata da árvore `site/`; documentação e ZIP fonte preservados, sem merge.
+**P0 pendente:** revisar PR, visualizar Netlify demo autenticado, verificar se contém V3.3, executar testes mobile/desktop, WhatsApp, menus, cookies e acessibilidade assistiva; corrigir somente defeitos comprovados.
+**P1:** homologação institucional com Rodrigo, revisão jurídica/OAB/LGPD, SEO e domínio final, deploy oficial somente após liberação explícita.
+**Dependência de arquitetura:** área de clientes, verificação de cobranças e documentos, denúncias sigilosas e painel administrativo permanecem restritos ao backlog de estudos.

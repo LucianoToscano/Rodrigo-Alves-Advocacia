@@ -32,8 +32,7 @@ O pedido de copiar, expandir/recolher e voltar ao início de textos extensos ref
 **Nota complementar:** `TASK-003` era uma demanda derivada do equívoco sobre controles de prompts; retirada do backlog ativo e ID reservado no histórico. A acessibilidade geral do website permanece coberta por auditorias de UX/QA, independente dessa interface.
 
 
-## Auditoria adicional V3.3 — 10/10/2026
-- ZIP SITE_FINAL: 1.190.915 bytes, 72 arquivos, 37 HTML, 9 JS; SHA-256 c9f569271a4e7f4d5debcfe632383b8fadedd798860326cd5c9a64a30f2025a1.
-- 1.748 referências locais verificadas sem destino ausente; 0 IDs duplicados; nenhum HTML sem title/H1/viewport; 0 imagens HTML sem alt; 9 node --check sem falhas.
-- Três retratos idênticos aos da V3.2. Chromium bloqueado por administrador, logo QA visual não homologado.
-- GitHub main só README; PR #1 draft parcial. Netlify demo deploy 6aca2f8346e0a16fb3c6a76d ready/manual/SSO; V3.3 nele não comprovada.
+### Prova de integridade da branch de recuperação V3.3
+- Diretório `site/` criado com os 72 arquivos extraídos, sem renomeações.
+- Árvore remota GitHub: `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2`; árvore local com `git add -A && git write-tree` retornou o mesmo SHA, evidenciando equivalência exata do conjunto de arquivos (incluindo binários).
+- Branch exclusiva `chore/recuperacao-v33-20261010`; `main` preservada. Testes visuais e deploy não são abrangidos por essa equivalência.

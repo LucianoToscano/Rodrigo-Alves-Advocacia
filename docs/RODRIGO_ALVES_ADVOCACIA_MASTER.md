@@ -44,3 +44,12 @@ Veja `REGISTRO_MESTRE_DE_DEMANDAS.md`, `CHECKLIST_GERAL_DO_PROJETO.md`, `DECISOE
 Pull Request de documentação **parcial**: https://github.com/LucianoToscano/rodrigo-alves-advocacia/pull/1. O PR não contém todo o código. A cópia local ZIP contém site/ e 16 documentos; não considerar GitHub a fonte única até transferência integral e revisão.
 
 **Correção V3.2 registrada parcialmente na branch de revisão em commit `ff5d2105`; PR #1 ainda em rascunho. A cópia integral V3.2 permanece local até transferência segura.**
+
+
+## 10. Continuidade V3.3 — verificação em 10/10/2026
+- Base de site correta: ZIP final V3.3 localizado no Drive, SHA-256 `c9f569271a4e7f4d5debcfe632383b8fadedd798860326cd5c9a64a30f2025a1` (72 arquivos/37 páginas HTML).
+- `site/` integralmente sincronizado na branch privada `chore/recuperacao-v33-20261010`. SHA da árvore Git `site/`: `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2`, idêntico à árvore local gerada dos arquivos extraídos. Inclui 9 imagens WebP e todos os scripts.
+- 1.748 referências relativas auditadas sem ausências, nove scripts validados com `node --check`; sem ID HTML duplicado ou página sem H1/título/viewport.
+- Três fotografias aprovadas intactas, com SHA-256 idêntico à V3.2.
+- `main` GitHub e PR #1 preservados. Netlify oficial/demo sem modificações, protegidos por SSO; V3.3 não homologada visualmente na hospedagem.
+- Chromium deste ambiente bloqueou navegação com `ERR_BLOCKED_BY_ADMINISTRATOR`; testes visuais/móveis/cliques aguardam navegador autorizado.
