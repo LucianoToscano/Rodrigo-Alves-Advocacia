@@ -31,3 +31,11 @@
 
 ## Roadmap V3.4
 P0 concluído em código: portal privado autenticação Edge e documentação em PR #3 sobre PR #2, 20/20 testes locais. P0 pendente: variáveis secretas configuradas no Netlify oficial; preview autenticada; teste de rate limit do provedor; QA mobile e rotas. Mudança SSO apenas após comprovação, com rollback imediato. Site demo antigo somente fonte histórica, sem novos deploys ou exclusão.
+
+
+## V3.6 — ciclo de melhoria sem alterar produção
+Concluído em branch **feat/v36-orientacao-conteudo-seguranca** e PR #6 draft, com base na V3.5 (PR #3; dependência anterior PR #2): orientação por sete situações, FAQs pesquisáveis, filtros adicionais da biblioteca, quatro roteiros antifraude e CSS acessível para os novos componentes. Nenhum segredo/Edge alterado. 33/33 testes locais aprovados, 38 páginas, 1.829 refs válidas, zero âncoras internas quebradas. Fotos/identidade preservadas.
+**Próximo P0:** QA no navegador de Edge/SSO, links, móvel, leitura assistiva e permalinks; autenticação V3.5 real; inspeção de todas as páginas. Sem retirar SSO ou publicar branch V3.6 antes disso.
+**Próximo P1:** revisão editorial e jurídica dos links, artigos e 12 publicações do Instagram; atualização dos canais oficiais; testes de acessibilidade e desempenho, revisão gradual CSS baseada em snapshots visuais reais.
+**Futuro condicionado:** SEO/canonical/sitemap somente após autorização pública; calculadoras previdenciárias normativas versionadas somente com validação; área de clientes e confirmações de cobrança/documentos somente com backend/MFA e LGPD; selos institucionais continuam projeto separado.
+**Registro Drive:** https://docs.google.com/document/d/1g4olJ2bV2j0Rj0jkmNdf22AHDoZy6YYlIvaAon8wxLE/edit

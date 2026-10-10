@@ -465,3 +465,16 @@ As demandas `SEC-006` (Área do Cliente), `SEC-004` + `SEC-005` (cobranças e do
 | SEC-013 | Configurado, não validado em deploy | Rate limit 5 tentativas por 60s, IP/domínio; confirmar 429 real. |
 | DEP-006 | Pendente | Usar projeto Netlify oficial, configurar segredos via painel, deploy privado com SSO ativo, testar antes de modificar visibilidade. |
 | DOC-007 | Parcial | PR #3 + manual técnico + testes; atualizar registro pós-deploy. |
+
+
+## V3.6 — navegação orientada e aprimoramentos editoriais (2026-10-10)
+Aprovação do usuário para executar melhorias seguras. **Implementado apenas em branch; não homologado em navegador/Netlify nem publicado**. PR #6 sobre PR #3; depende também do PR #2.
+| ID | Entrega | Estado e verificação |
+|---|---|---|
+| UX-007 | Página educativa Por onde começar? (7 situações, sem dados pessoais) | Implementado na branch V3.6; testes locais aprovados, QA real pendente |
+| CONT-004 | Pesquisa nas 18 FAQs existentes da homepage | Implementado na branch; conteúdo jurídico inalterado, QA visual pendente |
+| CONT-005 | Filtro de tipo da biblioteca além de assunto e área | Implementado na branch; índice JSON preexistente mantido |
+| SOC-003 | Respostas rápidas antifraude: Pix, links, conta comprometida | Implementado na branch; não verifica autoria nem recebe denúncias |
+| UX-008 | CSS isolado para novos componentes, foco, mobile, redução de movimento e impressão | Implementado; WCAG e testes de navegador pendentes |
+| QA-001 | Regressão V3.4/V3.5/V3.6 (33 testes), 38 páginas/1.829 referências locais e 1.251 âncoras | Testes estáticos e Node aprovados; não equivalem a integração Netlify |
+Observação: DEP-004 Netlify Forms é legado do planejamento; decisão V3.5 vigente mantém formulários desabilitados e contato via WhatsApp/e-mail até backend seguro e aprovação específica. SEO permanece noindex durante fase privada. Não duplicar área de clientes, selos oficiais ou verificação real sem backend.
