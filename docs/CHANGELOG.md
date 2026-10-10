@@ -69,3 +69,12 @@ Sete poses do desenho enviado, painel de navegação por Previdência, BPC, Saú
 
 ## AVR-001 V2 — 10/10/2026 (branch de revisão)
 Alterado assistente V1 para V2 com 10 poses individuais com transparência, alternância autônoma de expressões, passos curtos em desktop, balanço corporal discreto e controle de pausa. Mantidos menus de informação e política sem coleta. Criados `tests/test-assistente-v2.mjs` e documentação V2. Testes Node passaram; homologação visual pendente. **Não publicado**.
+
+
+## AVR-001 V3 — 10/10/2026 — movimento contínuo em revisão
+- Substituído o slideshow V2 por uma só imagem de alta definição com transparência sem perdas e deformação suave contínua (WebGL2 / fallback Canvas 2D).
+- Reduzido asset ativo para 467 KB sem alteração de pixels em relação ao PNG da V3.
+- Novo CSS/JS independente, painel responsivo, cinco orientações locais, pausa, teclado e movimento reduzido.
+- Testes históricos V1/V2 adaptados para verificar regressões relevantes; adicionado `test-assistente-v3.mjs`.
+- Testes Chromium isolados em desktop e telas 390/320 px: abrir/fechar painel, link educativo, pausa e Escape passaram. Ambiente bloqueou navegação por localhost; homologação no site real permanece pendente.
+- Sem merge, deploy, alteração de conteúdo institucional, login, SSO, Edge Functions ou Netlify Forms.

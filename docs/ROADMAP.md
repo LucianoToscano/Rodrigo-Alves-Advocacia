@@ -50,3 +50,7 @@ Fase 1: versão ilustrada e guiada em branch isolada (implementada, sem deploy).
 
 ### AVR-001 V2 — Próxima homologação
 V2 preparada com 10 imagens e movimento autônomo; validar UI real em dispositivos móveis e desktop, reduzir eventuais saltos entre poses e confirmar compatibilidade com portal privado. Sem qualquer mudança em Netlify ou publicação antes de aprovação.
+
+
+### AVR-001 — Etapa V3
+Base V3 de animação contínua preparada no PR #10; validar sob proteção SSO em preview e dispositivos reais. Após homologação, considerar apenas mediante autorização um rig profissional em camadas para giros reais do rosto e caminhada articulada (Rive/Live2D); a V3 não afirma possuir essa tecnologia.

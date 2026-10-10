@@ -136,3 +136,13 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [ ] Homologar movimento fluido sem tremores em navegadores e celulares reais.
 - [ ] Revisar possíveis sobreposições com WhatsApp, banner de consentimento e saída do portal.
 - [ ] Aprovar uso institucional das ilustrações e dos textos antes de merge/deploy.
+
+
+### AVR-001 V3 — integração no site em revisão
+- [x] Preservar fotos e marca existentes, utilizar só a imagem fornecida e recortada, sem gerar novo rosto.
+- [x] Integrar no loader global existente com CSS/JS isolados, sem modificar páginas institucionais.
+- [x] Substituir alternância de imagens por movimento contínuo; WebGL2 com fallback Canvas 2D e PNG/WebP sem perdas.
+- [x] Testar interface isolada em Chromium 1440, 390 e 320 px; sem overflow horizontal ou erros de página observados.
+- [ ] Executar testes integrais na branch (Netlify deploy preview protegido e dispositivos reais) e validar desempenho/acessibilidade com leitores de tela.
+- [ ] Rever sobreposição com cookies, WhatsApp, banner, botão sair e telas de menor altura.
+- [ ] Obter revisão visual e editorial antes de liberar deploy/merge.

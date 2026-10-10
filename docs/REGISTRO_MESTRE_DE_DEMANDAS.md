@@ -496,3 +496,9 @@ Relação entre os PRs: #2 base V3.3, #3 V3.5 autenticada, #6 V3.6, #7 V3.7. Nã
 - **Prioridade/estado:** P1 — Implementado em branch de revisão; QA e homologação pendentes.
 - **Escopo:** poses animadas; cinco orientações locais; links internos; acessibilidade progressiva; sem IA ou coleta de dados pessoais.
 - **Evidências:** `site/assets/js/assistente-rodrigo.js`, `site/assets/css/assistente-rodrigo.css`, `site/assets/img/assistente-rodrigo-poses.webp`, `tests/test-assistente-v1.mjs` e `docs/ASSISTENTE_VIRTUAL_RODRIGO_V1.md`.
+
+
+### AVR-001 — Atualização V3 (mesma demanda; não duplicar ID)
+- **Estado:** implementado na branch privada `feat/assistente-rodrigo-animado-v1`; PR #10 draft; aprovação visual, jurídica e QA real pendentes.
+- **Mudança:** renderização contínua baseada em uma única imagem WebP lossless 811×1506, sem poses sucessivas, com fallback Canvas 2D, cinco caminhos do site, opção de pausa e preferência reduzida.
+- **Evidências:** `site/assets/img/assistente-rodrigo-v3.webp`, `site/assets/js/assistente-rodrigo.js`, `site/assets/css/assistente-rodrigo.css`, `tests/test-assistente-v3.mjs`, `docs/ASSISTENTE_VIRTUAL_RODRIGO_V3.md`.

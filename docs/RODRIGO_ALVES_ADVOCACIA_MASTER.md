@@ -89,3 +89,7 @@ Implementação experimental na branch `feat/assistente-rodrigo-animado-v1`, sem
 
 ### AVR-001 — Atualização V2 (10/10/2026)
 Assistente ilustrado autônomo com **10 poses reais da última montagem fornecida**, fundo transparente WebP, animação CSS/JS com respiração, transições entre expressões e caminhadas curtas apenas no desktop. Integração em branch de revisão, sem IA, coleta de dados, merge ou publicação. Testes estáticos Node 3/3; testes reais em navegador bloqueados por `ERR_BLOCKED_BY_ADMINISTRATOR`. Consulte `docs/ASSISTENTE_VIRTUAL_RODRIGO_V2.md`.
+
+
+### AVR-001 V3 — Integração contínua de alta definição (10/10/2026)
+O assistente guia ilustrado agora usa **uma única imagem WebP lossless RGBA de 811×1506 px**, pixel a pixel idêntica ao recorte aprovado (467 KB), renderização contínua por WebGL2 ou Canvas 2D como alternativa, sem alternância de poses. Scripts e estilos permanecem isolados e carregados pelo `site.js` pré-existente. Os cinco assuntos e links informativos foram preservados. Testes de interação isolados em Chromium em 1440/390/320 px passaram, sem erro JavaScript ou overflow; teste de domínio real, leitores de tela, dispositivo físico e QA de produção ainda pendentes. PR #10 draft, sem merge ou mudança na Netlify. Ver `docs/ASSISTENTE_VIRTUAL_RODRIGO_V3.md`.

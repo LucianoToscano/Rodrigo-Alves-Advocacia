@@ -18,3 +18,5 @@ As aprovações institucionais foram relatadas pelo usuário; não são assinatu
 **Nota complementar:** `TASK-003` era uma demanda derivada do equívoco sobre controles de prompts; retirada do backlog ativo e ID reservado no histórico. A acessibilidade geral do website permanece coberta por auditorias de UX/QA, independente dessa interface.
 
 - **2026-10-10 — AVR-001:** desenvolver em revisão um guia ilustrado animado com o personagem do material enviado, sem apresentar a ilustração como advogado real ou atendimento ao vivo. Não habilitar IA, coleta de dados ou publicação sem QA.
+
+- **10/10/2026 — AVR-001 V3:** guia animado permanecerá componente informativo em revisão. Priorizar nitidez de uma arte de 811×1506 px com compressão sem perdas, respeitar redução de movimento, teclado, LGPD e canais oficiais. Não simular atendimento jurídico ao vivo nem publicar antes de QA e aprovação. A evolução para rigging Rive/Live2D é futura, não implementada nesta V3.
