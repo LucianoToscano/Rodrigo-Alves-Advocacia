@@ -1,0 +1,46 @@
+# Histórico de alterações
+
+## 2026-10-10 — Consolidação V3.1 (local; ainda não publicada)
+- DOC-001/002/003/005: criada estrutura `docs/` e documentação cruzada.
+- UX-001/002/003/004: criados `site/assets/js/longtext.js` e `site/assets/css/longtext.css`; aplicados quatro blocos em três páginas.
+- DEP-001/002: inspecionados repositório GitHub privado e projeto Netlify; código não identificado no GitHub, Forms desativado, deploy com SSO.
+- Segurança: documentação fora do diretório publicável; `publish = site` em `netlify.toml` raiz.
+- Não foi realizado deploy nem implantado backend.
+
+## Histórico anterior (evidência: relatórios/arquivos locais)
+- V6.4: segurança, cartão profissional, guias antifraude.
+- V6.3: central antifraude e verificação local de canais.
+- V6.2: contrastes em áreas claras.
+- V6.1: correções de formulário/canonical/320px.
+- V6: Central de Serviços Jurídicos.
+- V5: acervo Instagram curado.
+- V4: institucional e ferramentas BPC.
+- V3: biblioteca e recursos editoriais.
+- V2: refinamento visual.
+
+Antes de relacionar a commits reais, obter SHAs e validar comparações.
+
+## 2026-10-10 — Sincronização GitHub parcial (sem deploy)
+- Branch `chore/consolidacao-v31-revisao`; PR #1 draft. Arquivo Mestre e SYNC_STATUS adicionados.
+- Os demais arquivos aguardam transferência integral; ver DEP-001.
+
+## V3.2 — 2026-10-10 — Correção de escopo (DOC-006)
+- Excluída do Prompt Mestre a antiga Seção 34; antiga Seção 35 renumerada 34; removido o antigo PASSO 14 e renumerada a sequência; retirada frase do objetivo final sobre interface de textos longos.
+- **Erro de interpretação na V3.1:** os IDs UX-001 a UX-004 e TASK-003 foram anulados (não reutilizar), removidos do backlog e checklist ativos; histórico preservado neste changelog e na auditoria.
+- Retirados `longtext.js`, `longtext.css` e os elementos `.ra-longtext` inseridos em três páginas. Conteúdo substantivo dos quatro blocos preservado em HTML simples.
+- SEC-003, SEC-004, SEC-005, SEC-006, SEC-007 vinculados à análise de viabilidade, segurança, LGPD e autorização específica. Nenhum backend novo foi habilitado.
+- Projeto de selos segue separado. GitHub e Netlify não foram modificados pelo pacote local V3.2.
+
+**Nota complementar:** `TASK-003` era uma demanda derivada do equívoco sobre controles de prompts; retirada do backlog ativo e ID reservado no histórico. A acessibilidade geral do website permanece coberta por auditorias de UX/QA, independente dessa interface.
+
+## V3.2 — atualização parcial do PR #1 (GitHub, sem merge)
+- Branch `chore/consolidacao-v31-revisao`: Arquivo Mestre alterado para registrar correção de escopo; descrição do PR #1 atualizada para V3.2.
+- **Não enviado ao GitHub ainda:** site/ completo, docs/ completos, Prompt Mestre V3.2 e projeto institucional separado. O PR continua em rascunho e não deve ser mesclado.
+- **Netlify:** sem deploy novo.
+
+
+## V3.3 — recuperação e auditoria de 10/10/2026
+- Pacote final V3.3 recuperado do Drive, SHA-256 c9f569271a4e7f4d5debcfe632383b8fadedd798860326cd5c9a64a30f2025a1, 72 arquivos e 37 HTML.
+- V3.2 → V3.3: 7 novos, 40 modificados, zero removidos; três retratos idênticos byte a byte aos aprovados.
+- 1.748 referências locais válidas, 0 IDs duplicados, 9 JS sem erros de sintaxe.
+- GitHub em branch isolada; não houve merge nem alteração Netlify. Navegador Chromium local bloqueado; homologação visual pendente.
