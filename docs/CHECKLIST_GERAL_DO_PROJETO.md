@@ -109,3 +109,16 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [ ] Atualizar o conteúdo de links antigos dentro de documentos DOCX copiados, **após reconectar conta correta**.
 - [ ] Checar integridade de todos os arquivos migrados com hashes, especialmente ZIPs grandes; tamanhos iguais não bastam para comprovar integridade.
 - [ ] Considerar migração concluída somente após verificação e restauração de acesso sem a conta antiga.
+
+
+## Bloqueio de liberação do portal apenas com senha — 10/10/2026
+
+- [ ] **DEP-006** [P0] Revisar e mesclar com segurança PRs #2, #3, #6, #7 e #8, preservando SSO durante as publicações intermediárias.
+- [ ] **SEC-011** [P0] Confirmar guard `/*`, ambas Edge Functions e configuração de segredos no **deploy de produção** do projeto oficial, não apenas em preview.
+- [ ] **SEC-012** [P0] Inventariar e tratar todos os permalinks e deploys históricos sem guard ANTES de mudar a política de visibilidade.
+- [ ] **SEC-013** [P0] Homologar login no Android e iOS, sessão, cookie, rate limiting, bloqueio de ativos e logout; corrigir incompatibilidade de logout WebView sem enfraquecer CSRF.
+- [ ] **DEP-007** [P0] Verificar capacidade real de SSO restrito a **não produção** (ou proteção equivalente). Se não suportada, manter SSO nos deploys legados.
+- [ ] **DEP-008** [P0] Abrir produção com somente a senha institucional após aprovação explícita, teste anônimo completo e rollback SSO previamente preparado.
+- [x] **DOC-007** [P0] Preparar runbook detalhado de liberação e reversão — `docs/PLANO_LIBERACAO_SOMENTE_SENHA_20261010.md`, **nenhuma desproteção executada**.
+
+**Estado operacional: NO-GO para remover SSO.** `main` ainda tem deploy antigo sem guard. Não considerar um teste em preview como autorização para tornar todos os permalinks públicos.
