@@ -20,3 +20,34 @@
 
 ## Estado de continuidade após importação GitHub V3.3
 Pacote final Drive V3.3 com 72 arquivos/37 páginas. `site/` completo no GitHub em `chore/recuperacao-v33-20261010`, árvore SHA `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2` conferida local e remotamente. Docs e `institucional-selos/` também recuperados. `main` e PR #1 anteriores preservados. Netlify demo SSO, Forms desabilitado, deploy anterior `6aca2f8346e0a16fb3c6a76d`; V3.3 em hospedagem não homologada. Browser Chromium local bloqueado, portanto QA mobile e cliques requer Work/navegador autorizado. Não trocar fotos nem abrir site público sem aprovação.
+
+
+## DESTINO CANÔNICO DO GOOGLE DRIVE APÓS MIGRAÇÃO (10/10/2026)
+Pasta principal de propriedade de LucianoToscano: https://drive.google.com/drive/folders/1vcwfP0U-jQR-b2pbXHFgadp6t1wyUOj5
+Pasta de documentação: https://drive.google.com/drive/folders/1OyLCeTFBN_q3GM6SfcouyaykI70VoALr
+Guia de continuidade já **copiado** como DOCX no novo Drive: https://drive.google.com/file/d/1i1bz0XsZbyCrk1WKbD1Hqn0kd2mpkrRb/view (texto confere referência à V3.7 e PR #7).
+Pasta de código: https://drive.google.com/drive/folders/1ypbKe66-xUjO9VjjsY_xxUKJDY7-6IT7
+Backup: https://drive.google.com/drive/folders/1bf0nTzEqYOTpjnNQ9w05uq9WYmWB6jAf
+GitHub fonte de implementação: https://github.com/LucianoToscano/rodrigo-alves-advocacia (PR #2 → #3 → #6 → #7, todos não mesclados).
+**MUDANÇA DE CONEXÃO PENDENTE:** o plugin Drive deste chat devolveu perfil da conta antiga. Após o proprietário desconectá-la, conectar Drive na conta LucianoToscano, conferir get_profile e reler novo guia. Links antigos não são o destino da documentação.
+**RISCO DE COMPARTILHAMENTO CRÍTICO:** pasta nova foi observada com `anyone:writer`; solicitar ao proprietário corrigir por UI. Recomendar arquivo principal **Restrito** e uma área pública somente com GUIA COMPARTILHÁVEL read-only, sem backups, Instagram ou clientes. O conector atual não oferece alteração direta de permissão pública da pasta.
+
+
+## CONFIRMAÇÃO DE CONEXÃO — DRIVE LUCIANOTOSCANO — 10/10/2026
+A conexão Google Drive foi testada novamente e retornou o perfil **Luciano Toscano / lucianotoscano@gmail.com**. O novo Arquivo Mestre e a documentação são acessíveis. A permissão geral confirmada é `anyone:commenter` no Arquivo Mestre e nas suas seis subpastas; isso dá **leitura e possibilidade de comentários**, logo a pasta de backups e a pasta do acervo Instagram necessitam restrição de acesso pelo proprietário.
+**Documento de entrada atual e revisável:** https://docs.google.com/document/d/1AERhMQ1o0FvcndFFPbEVZGfoAhO0H9rH5VuN8ryhtZg/edit
+**Registro de revisões e comentários:** https://docs.google.com/document/d/1aJ1wo0MtSKLI-dvLZhSQdZZ-I0UKfQzCqPVN3mxqJGg/edit
+Esses dois documentos nativos foram criados e verificados dentro da nova pasta `02_DOCUMENTACAO_E_PROMPT`. Um comentário de teste foi criado, lido e resolvido. O guia V3.3 copiado em DOCX continua **histórico** e conserva endereços antigos; não usá-lo como destino de futuras gravações. O acesso do GPT de Rodrigo a comentários deve ser testado na conta dele; nenhum segredo ou documento de cliente deve ser registrado nesses arquivos compartilhados.
+
+
+## Proteção da aparência do Dr. Rodrigo — Acervo 07 (10/10/2026)
+Referências curadas: https://drive.google.com/drive/folders/1vbONFn8yQ-v8fftBmH3yf9dTGVaPv45i
+Guia obrigatório de fisionomia e estilo: https://docs.google.com/document/d/1awl4cnyqQkGYayJBPPhvumm1XOtIFAhtAtbXEcsIW4w/edit
+Inventário inicial: 58 imagens JPG e um desktop.ini; 0 imagens JPG idênticas no SHA-256, vários fotogramas quase iguais.
+Seleção após auditoria de procedência: 17 imagens (10 naturais históricas, 4 de óculos/ângulos/perfil, 3 editoriais APENAS de estilo, nunca de fisionomia); 41 imagens redundantes, menos úteis ou de origem pendente e desktop.ini foram movidos reversivelmente para arquivo: https://drive.google.com/drive/folders/1kF2TthAezpQ8LtauuE6zXqGt8fsu_NW7 . Nenhuma foto foi apagada definitivamente, e os três retratos institucionais aprovados do site V3.3 permanecem idênticos.
+Nunca modificar feições, idade aparente atual, sobrancelhas, olhos, nariz, boca, cabelo, barba, proporções ou tom natural de pele. Referência de rosto: fotos NATURAIS atuais expressamente aprovadas pelo advogado; fotos antigas só como apoio histórico; peças editoriais somente como referência de composição, não biométrica. As fotos do rosto precisam de revisão de Rodrigo antes da publicação. Não tomar imagens com outras marcas como prova da aparência dele.
+A pasta compartilha acesso de Comentador por link; verificar autorização de acesso a retratos. Não houve alteração no Netlify, SSO, website ou branch main.
+
+
+### Revisão final de procedência e fotos WebP aprovadas
+As imagens de vídeo de 2025 com a identificação visual de outro perfil (alvesdiasadvogados) foram separadas em https://drive.google.com/drive/folders/1b0m1Dyg6qhLQ0O_yfVUbGHz9DJmAsEfb . Sua titularidade deve ser confirmada por Rodrigo ANTES de considerá-las referência facial. O total da pasta 07 é: 17 imagens selecionadas por uso (10 naturais históricas, 4 óculos/perfil, 3 EDITORIAIS SOMENTE ESTILO) e três fotografias WebP institucionais aprovadas do site V3.3, que estão agora disponíveis diretamente em https://drive.google.com/drive/folders/1Af0mtqOJOi2aB9WBA4Lv5EC9G9qf190H (arquivos, MIME e tamanho preservados). Painel visual das 17 selecionadas: https://drive.google.com/file/d/1Nc5W0SZiOQQ4nBy5hmyHlfmMUSOuC_nF/view . A triagem de descartes guarda 42 itens (41 JPG e desktop.ini), nenhum excluído definitivamente. Sempre seguir o guia atualizado https://docs.google.com/document/d/1awl4cnyqQkGYayJBPPhvumm1XOtIFAhtAtbXEcsIW4w/edit e pedir ao advogado retratos naturais recentes validados antes de gerar uma imagem oficial.

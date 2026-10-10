@@ -39,3 +39,8 @@ Concluído em branch **feat/v36-orientacao-conteudo-seguranca** e PR #6 draft, c
 **Próximo P1:** revisão editorial e jurídica dos links, artigos e 12 publicações do Instagram; atualização dos canais oficiais; testes de acessibilidade e desempenho, revisão gradual CSS baseada em snapshots visuais reais.
 **Futuro condicionado:** SEO/canonical/sitemap somente após autorização pública; calculadoras previdenciárias normativas versionadas somente com validação; área de clientes e confirmações de cobrança/documentos somente com backend/MFA e LGPD; selos institucionais continuam projeto separado.
 **Registro Drive:** https://docs.google.com/document/d/1g4olJ2bV2j0Rj0jkmNdf22AHDoZy6YYlIvaAon8wxLE/edit
+
+
+## Atualização V3.7 — acessibilidade e checklists
+Concluído em código (PR #7 draft): sete checklists de organização por situação com impressão/PDF local; atalhos nos sete cartões de orientação; página de acessibilidade para pessoas cegas/baixa visão/surdas/dificuldade motora; alto contraste e ampliação; voz opcional do navegador e VLibras externo apenas após clique. Testes Node 42/42, 39 HTML, 2066 refs válidas, fotos originais intactas. Não publicado.
+Próximo P0: validação Netlify Edge/SSO, todas URLs antigas, segurança de sessão, qualidade visual e teclado/leitor de tela; revisão jurídica das sete listas e processamento externo VLibras antes de efetivar qualquer integração em produção. Avaliar com usuários reais e intérprete humano quando apropriado.

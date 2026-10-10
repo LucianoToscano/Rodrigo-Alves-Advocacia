@@ -10,7 +10,7 @@ const secrets = {
 globalThis.Netlify = {env:{get:name=>secrets[name]}};
 const gate = await import('../netlify/edge-functions/portal-guard.ts');
 const login = await import('../netlify/edge-functions/portal-login.ts');
-const shared = await import('../netlify/edge-functions/portal-shared.ts');
+const shared = await import('../netlify/lib/portal-shared.ts');
 const origin = 'https://rodrigo-alves-advocacia.netlify.app';
 let passed=0;
 function req(path='/',opts={}){return new Request(origin+path,opts)}

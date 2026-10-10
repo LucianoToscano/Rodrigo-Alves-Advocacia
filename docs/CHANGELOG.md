@@ -56,3 +56,10 @@ Criadas Netlify Edge Functions (guarda geral, login limitado, sessão HMAC) e JS
 - Biblioteca: filtro por formato de conteúdo e orientação contextual. Página de ferramentas e Central de Segurança atualizadas com atalhos/roteiros.
 - CSS novo assets/css/orientacao-v36.css e JS assets/js/orientacao-v36.js; testes tests/test-v36.mjs. Teste V3.5 ajustado para reconhecer explicitamente a 38ª página.
 - Fotografia, logomarca, autenticação Netlify e infraestrutura da V3.5 preservadas. PR #6 draft, sem merge/deploy. QA local 33/33 aprovado; homologação visual real pendente.
+
+
+## V3.7 — checklists personalizados e inclusão — 10/10/2026
+- Novo site/acessibilidade.html, CSS/JS inclusivos carregados nas 39 páginas; controles de apresentação, orientações de leitor de tela, fala opcional e VLibras somente após clique (terceiro não homologado).
+- `site/ferramentas/organizar-documentos.html` de 3 para 7 temas; marcações em memória e impressão nativa/PDF, sem entrada de dados pessoais.
+- Ligações da orientação V3.6 aos checklists via código de assunto em URL. Testes tests/test-v37.mjs, 42/42 aprovados no conjunto.
+- Conservadas imagens, portal privado, SSO e branch main. PR #7 draft pendente de QA real, LGPD/OAB e homologação externa.
