@@ -57,3 +57,15 @@ Atualizado 2026-10-10. `[x]` significa validação local documentada em etapa an
 - [ ] Verificar com navegador autorizado a versão servida no Netlify demo e se equivale à V3.3.
 - [ ] Homologar desktop/mobile 320–375px, menus, cookies, Central de Segurança, cartão, acervo e clique WhatsApp.
 - [ ] Revisar LGPD, segurança, conteúdo jurídico e aprovação final antes de abrir ao público.
+
+
+## Checklist V3.4 — portal de acesso
+- [x] Recuperar V3.3 mais completa; pacote V3.2 PORTAL_PRIVADO_SENHA não localizado nos acessos atuais.
+- [x] Preservar 37 HTML e fotos institucionais.
+- [x] Implementar Edge Functions, login, cookie 12h, logout e UI com logomarca.
+- [x] Testar 20 cenários locais com credenciais fictícias.
+- [x] Criar PR #3 rascunho e manual técnico, sem modificar main ou Netlify.
+- [ ] Configurar variáveis secretas somente no projeto oficial Netlify (Functions).
+- [ ] Executar deploy de preview no projeto oficial mantendo SSO.
+- [ ] Validar HTTP 401, 429, cookies, mobile, menu, Whatsapp, segurança, fotos e acesso direto.
+- [ ] Após QA e aprovação, mudar proteção SSO para tela privada e conferir anonimamente.

@@ -27,3 +27,7 @@
 **P0 pendente:** revisar PR, visualizar Netlify demo autenticado, verificar se contém V3.3, executar testes mobile/desktop, WhatsApp, menus, cookies e acessibilidade assistiva; corrigir somente defeitos comprovados.
 **P1:** homologação institucional com Rodrigo, revisão jurídica/OAB/LGPD, SEO e domínio final, deploy oficial somente após liberação explícita.
 **Dependência de arquitetura:** área de clientes, verificação de cobranças e documentos, denúncias sigilosas e painel administrativo permanecem restritos ao backlog de estudos.
+
+
+## Roadmap V3.4
+P0 concluído em código: portal privado autenticação Edge e documentação em PR #3 sobre PR #2, 20/20 testes locais. P0 pendente: variáveis secretas configuradas no Netlify oficial; preview autenticada; teste de rate limit do provedor; QA mobile e rotas. Mudança SSO apenas após comprovação, com rollback imediato. Site demo antigo somente fonte histórica, sem novos deploys ou exclusão.

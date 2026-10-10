@@ -157,3 +157,20 @@
    });
  });
 })();
+
+/* Acesso privado de apresentação: saída de sessão autorizada pelo servidor. */
+(() => {
+  'use strict';
+  if (document.querySelector('[data-ra-private-exit]')) return;
+  const form = document.createElement('form');
+  form.method = 'POST';
+  form.action = '/__acesso/sair';
+  form.className = 'ra-private-exit';
+  form.setAttribute('data-ra-private-exit', '');
+  const button = document.createElement('button');
+  button.type = 'submit';
+  button.textContent = 'Encerrar acesso';
+  button.setAttribute('aria-label', 'Encerrar acesso privado e voltar para a tela de senha');
+  form.appendChild(button);
+  document.body.appendChild(form);
+})();

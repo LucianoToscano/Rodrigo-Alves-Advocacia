@@ -36,3 +36,7 @@ O pedido de copiar, expandir/recolher e voltar ao início de textos extensos ref
 - Diretório `site/` criado com os 72 arquivos extraídos, sem renomeações.
 - Árvore remota GitHub: `9a26ef73caa5ae0ab2e99cea411fb47ba4a2c9e2`; árvore local com `git add -A && git write-tree` retornou o mesmo SHA, evidenciando equivalência exata do conjunto de arquivos (incluindo binários).
 - Branch exclusiva `chore/recuperacao-v33-20261010`; `main` preservada. Testes visuais e deploy não são abrangidos por essa equivalência.
+
+
+## Verificação Portal Privado V3.4
+GitHub PR #3 em rascunho; commit 385350c0ea10cb703e454551894442c9abdb4bd3 contém código e 20 testes. 37 páginas existentes intactas. Segredos inexistentes no GitHub e não transmitidos no chat. Rate limit declarado via config de Edge Function, ainda sem teste de HTTP 429 na hospedagem. Deploy oficial 6aca07e0e41b1e712c726fc0 tem 1 arquivo, nenhuma Edge Function e SSO ligado. Sem homologação real. Não alterar visibilidade sem preflight com segredos e navegador.
