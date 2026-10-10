@@ -1,2 +1,13 @@
 [build]
   publish = "site"
+
+# All routes including CSS/JS/JSON/photos MUST pass through this fail-closed gate.
+# The original logo is the sole publicly readable media asset for the password screen.
+[[edge_functions]]
+  function = "portal-guard"
+  path = "/*"
+
+# Rate limiting is declared in portal-login.ts (Netlify does not read rateLimit from TOML).
+[[edge_functions]]
+  function = "portal-login"
+  path = "/__acesso/entrar"
