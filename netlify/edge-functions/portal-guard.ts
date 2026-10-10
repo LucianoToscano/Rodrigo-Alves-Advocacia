@@ -34,7 +34,7 @@ export default async function portalGuard(request: Request, context: any): Promi
       // Never return HTML to requests for protected binary assets or data files.
       const html = path === '/' || path.endsWith('/') || path.endsWith('.html') || !/\.[a-zA-Z0-9]{1,8}$/.test(path);
       if (!html) return new Response('Autenticação necessária.',{status:401,headers:privacyHeaders({'content-type':'text/plain'})});
-      return loginPage(destination);
+      return await loginPage(destination, false, url.host);
     }
     const next = await context.next();
     const headers = new Headers(next.headers);
