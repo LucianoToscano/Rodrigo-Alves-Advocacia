@@ -31,3 +31,10 @@ Backup: https://drive.google.com/drive/folders/1bf0nTzEqYOTpjnNQ9w05uq9WYmWB6jAf
 GitHub fonte de implementação: https://github.com/LucianoToscano/rodrigo-alves-advocacia (PR #2 → #3 → #6 → #7, todos não mesclados).
 **MUDANÇA DE CONEXÃO PENDENTE:** o plugin Drive deste chat devolveu perfil da conta antiga. Após o proprietário desconectá-la, conectar Drive na conta LucianoToscano, conferir get_profile e reler novo guia. Links antigos não são o destino da documentação.
 **RISCO DE COMPARTILHAMENTO CRÍTICO:** pasta nova foi observada com `anyone:writer`; solicitar ao proprietário corrigir por UI. Recomendar arquivo principal **Restrito** e uma área pública somente com GUIA COMPARTILHÁVEL read-only, sem backups, Instagram ou clientes. O conector atual não oferece alteração direta de permissão pública da pasta.
+
+
+## CONFIRMAÇÃO DE CONEXÃO — DRIVE LUCIANOTOSCANO — 10/10/2026
+A conexão Google Drive foi testada novamente e retornou o perfil **Luciano Toscano / lucianotoscano@gmail.com**. O novo Arquivo Mestre e a documentação são acessíveis. A permissão geral confirmada é `anyone:commenter` no Arquivo Mestre e nas suas seis subpastas; isso dá **leitura e possibilidade de comentários**, logo a pasta de backups e a pasta do acervo Instagram necessitam restrição de acesso pelo proprietário.
+**Documento de entrada atual e revisável:** https://docs.google.com/document/d/1AERhMQ1o0FvcndFFPbEVZGfoAhO0H9rH5VuN8ryhtZg/edit
+**Registro de revisões e comentários:** https://docs.google.com/document/d/1aJ1wo0MtSKLI-dvLZhSQdZZ-I0UKfQzCqPVN3mxqJGg/edit
+Esses dois documentos nativos foram criados e verificados dentro da nova pasta `02_DOCUMENTACAO_E_PROMPT`. Um comentário de teste foi criado, lido e resolvido. O guia V3.3 copiado em DOCX continua **histórico** e conserva endereços antigos; não usá-lo como destino de futuras gravações. O acesso do GPT de Rodrigo a comentários deve ser testado na conta dele; nenhum segredo ou documento de cliente deve ser registrado nesses arquivos compartilhados.
