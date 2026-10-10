@@ -84,3 +84,6 @@ Alterado assistente V1 para V2 com 10 poses individuais com transparência, alte
 - Usuário solicitou deixar assistente Rodrigo desligado por enquanto e retomar melhorias futuramente.
 - Desabilitado o carregamento em `site/assets/js/site.js` por flag `ASSISTENTE_RODRIGO_ATIVO = false`. Sem injeção de CSS, JS do widget ou DOM do personagem.
 - Arquivos, documentação, imagens e testes preservados na branch PR #10 (rascunho). Sem merge na `main`, sem mudança no portal privado/Netlify SSO.
+
+## AVR-001 — suspensão reforçada (10/10/2026)
+Removido o autocarregador do assistente do `site/assets/js/site.js` na branch PR #10. JS, CSS e imagens do assistente permanecem no repositório, porém não são carregados nem mostrados. Ajustados testes para assegurar inatividade. A prévia da Netlify só refletirá a alteração após um build bem-sucedido; nenhum deploy em produção.

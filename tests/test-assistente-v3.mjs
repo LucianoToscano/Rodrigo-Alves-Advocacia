@@ -33,8 +33,8 @@ test('AVR-001 V3: segurança, acessibilidade e links de assuntos',()=>{
 });
 test('AVR-001 V3: carregamento independente do site principal e sem tocar o portal',()=>{
  const global=read('site/assets/js/site.js');
- assert.match(global,/js\/assistente-rodrigo\.js/);
- assert.match(global,/css\/assistente-rodrigo\.css/);
+ assert.doesNotMatch(global,/js\/assistente-rodrigo\.js/);
+ assert.doesNotMatch(global,/css\/assistente-rodrigo\.css/);
  assert.match(global,/__acesso\/sair/);
  assert.doesNotMatch(js,/RA_PRIVATE_ACCESS_PASSWORD|RA_PRIVATE_SESSION_KEY/);
 });

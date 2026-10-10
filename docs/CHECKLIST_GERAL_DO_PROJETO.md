@@ -153,3 +153,8 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [x] Aplicar bloqueio explícito no carregamento do assistente para que permaneça oculto na prévia.
 - [ ] Validar build de prévia após commit e conferir que o personagem não aparece no domínio de homologação.
 - [ ] Retomar refinamento de rigging, nitidez e naturalidade apenas quando solicitado.
+
+### AVR-001 — confirmação extra de inatividade
+- [x] Excluir completamente o autocarregador de `site/assets/js/site.js` na branch do PR #10, conservando os arquivos do personagem.
+- [x] Adequar testes automatizados para falhar caso o carregador seja reintroduzido.
+- [ ] Confirmar build Netlify bem-sucedido e ausência do personagem no endereço exato do usuário; não afirmar isso antes de testar.

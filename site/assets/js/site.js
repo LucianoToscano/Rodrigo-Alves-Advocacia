@@ -174,24 +174,3 @@
   form.appendChild(button);
   document.body.appendChild(form);
 })();
-
-
-/* AVR-001: carregamento progressivo do assistente ilustrado, sem dependências externas. */
-(() => {
-  'use strict';
-  // AVR-001: assistente estacionado por solicitação do usuário. Não carregar scripts, CSS ou personagem.
-  const ASSISTENTE_RODRIGO_ATIVO = false;
-  if (!ASSISTENTE_RODRIGO_ATIVO) return;
-  const own = document.currentScript || [...document.scripts].find(s => /\/assets\/js\/site\.js(?:\?|$)/.test(s.src));
-  if (!own || document.querySelector('script[data-ra-assistente]')) return;
-  const assets = new URL('../', own.src);
-  const css = document.createElement('link');
-  css.rel = 'stylesheet';
-  css.href = new URL('css/assistente-rodrigo.css', assets).href;
-  document.head.appendChild(css);
-  const js = document.createElement('script');
-  js.src = new URL('js/assistente-rodrigo.js', assets).href;
-  js.defer = true;
-  js.dataset.raAssistente = '1';
-  document.head.appendChild(js);
-})();

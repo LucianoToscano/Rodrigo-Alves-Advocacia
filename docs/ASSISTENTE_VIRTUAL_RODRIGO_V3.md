@@ -31,3 +31,7 @@
 
 ## PAUSADO / OCULTO — solicitação de 10/10/2026
 **AVR-001 está desativado por decisão do usuário.** O carregador em `site/assets/js/site.js` usa `const ASSISTENTE_RODRIGO_ATIVO = false` e retorna antes de inserir CSS, script ou qualquer elemento do assistente. O personagem não deve aparecer nem se movimentar em nenhuma página enquanto esse bloqueio estiver ativo. Guardar os arquivos JS/CSS/WebP, testes e histórico para futura melhoria; **não remover a proteção ou publicar** sem novo pedido explícito. PR #10 permanece em revisão/pausado.
+
+
+### AVR-001: congelamento por decisão do usuário — desativação reforçada (10/10/2026)
+A solicitação mais recente é manter o boneco **OFF/oculto**. Para garantir isso mesmo sem depender de flag, removemos integralmente o bloco de carregamento automático de CSS/JS do assistente de `site/assets/js/site.js` na branch do PR #10. Os arquivos `site/assets/js/assistente-rodrigo.js`, `site/assets/css/assistente-rodrigo.css` e imagens ficam arquivados na branch para melhorias futuras. Nenhuma página deve importar esses arquivos em ambiente ativo. Testes V1 e V3 foram atualizados para assegurar a ausência do carregamento. Esta atualização ainda requer deploy-preview com build bem-sucedido; a prévia anterior pode continuar visível caso o build falhe. A `main` e a produção não foram alteradas.

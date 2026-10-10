@@ -97,3 +97,6 @@ O assistente guia ilustrado agora usa **uma única imagem WebP lossless RGBA de 
 
 ### AVR-001 — decisão atual: OCULTO E DESATIVADO (10/10/2026)
 Por solicitação expressa do usuário, o assistente animado Rodrigo V3 foi colocado em espera. O carregamento em `site/assets/js/site.js` possui flag fixa `ASSISTENTE_RODRIGO_ATIVO = false`, impedindo exibição e inicialização do componente. Preservados personagem HD, código, testes e documentação na branch de revisão PR #10. **Não reativar nem publicar** até novo pedido. A `main` e as configurações Netlify/SSO permanecem intactas.
+
+### AVR-001 — decisão reforçada após evidência visual de prévia antiga (10/10/2026)
+O componente deve permanecer **desligado e invisível**. Como a prévia falhou no build e ainda mostrava o boneco, removido o autocarregador de `site.js` na branch de revisão (em vez de apenas retornar com flag falsa). Assets preservados para continuidade posterior. `main` não continha o assistente. Requer verificação posterior do deploy-preview bem-sucedido antes de declarar que a prévia está corrigida.

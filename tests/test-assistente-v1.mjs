@@ -13,7 +13,7 @@ test('AVR-001: destinos internos educativos disponíveis',()=>{
 });
 test('AVR-001: carregador, limites educativos e privacidade',()=>{
  const global=content('site/assets/js/site.js'),guide=content('site/assets/js/assistente-rodrigo.js');
- assert.match(global,/js\/assistente-rodrigo\.js/);
+ assert.doesNotMatch(global,/assistente-rodrigo\.(js|css)|ASSISTENTE_RODRIGO_ATIVO/);
  assert.match(guide,/prefers-reduced-motion/);
  assert.match(guide,/localStorage/);
  assert.doesNotMatch(guide,/fetch\s*\(|XMLHttpRequest|apiKey|process\.env|eval\s*\(/);
