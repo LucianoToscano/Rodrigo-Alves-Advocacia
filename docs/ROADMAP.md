@@ -44,3 +44,15 @@ Concluído em branch **feat/v36-orientacao-conteudo-seguranca** e PR #6 draft, c
 ## Atualização V3.7 — acessibilidade e checklists
 Concluído em código (PR #7 draft): sete checklists de organização por situação com impressão/PDF local; atalhos nos sete cartões de orientação; página de acessibilidade para pessoas cegas/baixa visão/surdas/dificuldade motora; alto contraste e ampliação; voz opcional do navegador e VLibras externo apenas após clique. Testes Node 42/42, 39 HTML, 2066 refs válidas, fotos originais intactas. Não publicado.
 Próximo P0: validação Netlify Edge/SSO, todas URLs antigas, segurança de sessão, qualidade visual e teclado/leitor de tela; revisão jurídica das sete listas e processamento externo VLibras antes de efetivar qualquer integração em produção. Avaliar com usuários reais e intérprete humano quando apropriado.
+
+
+## V3.8 — Rede de Apoio e Solidariedade (nova proposta)
+
+**Implementado em branch de revisão, não homologado/publicado:** `site/apoio/index.html`, apresentação responsiva, oito guias de emergência/vulnerabilidade, oito organizações com links diretos e filtros sem armazenamento; entradas na home e em orientação; teste e documento específico. Nenhum cadastro, PIX, gestão de campanhas ou pesquisa automática de localização.
+
+**P0:** rodar suíte de testes completa, conferir visual/teclado 320px/mobile, testar SSO/guard e revisar links, conteúdo médico-social e compliance OAB antes da mesclagem/publicação.
+
+**P1:** diretório territorial do RN (CRAS, CREAS, Centro POP, hemocentros, associações locais) com fontes municipais e curadoria trimestral. Gerenciamento de catálogo com aprovação editorial; inicialmente via PR no GitHub, não painel admin aberto.
+
+**P2:** avaliação de calendário solidário e fluxo para reportar link quebrado, sem coleta sensível. Não intermediar pagamentos, doações nem parcerias sem autorização formal. Guia: `docs/REDE_APOIO_CIDADANIA_SOLIDARIEDADE_20261010.md`.
+
