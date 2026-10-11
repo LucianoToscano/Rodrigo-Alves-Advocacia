@@ -47,8 +47,8 @@ test('private phase: 37 original pages plus guided V3.6 and accessible V3.7 page
  const dir=join(root,'site');
  function collect(p) {return readdirSync(p,{withFileTypes:true}).flatMap(ent=>ent.isDirectory()?collect(join(p,ent.name)):[join(p,ent.name)]);}
  const pages=collect(dir).filter(p=>p.endsWith('.html'));
- assert.equal(pages.length,39);
- assert.equal(pages.filter(p=>!p.endsWith('/orientacao/index.html')&&!p.endsWith('/acessibilidade.html')).length,37);
+ assert.equal(pages.length,40);
+ assert.equal(pages.filter(p=>!p.endsWith('/orientacao/index.html')&&!p.endsWith('/acessibilidade.html')&&!p.endsWith('/apoio/index.html')).length,37);
  for(const p of pages) assert.match(readFileSync(p,'utf8'),/<meta(?=[^>]*name="robots")(?=[^>]*content="noindex,nofollow,noarchive")[^>]*>/);
  for(const name of ['rodrigo-hero-v2.webp','rodrigo-mobile-v2.webp','rodrigo-perfil-v2.webp']) assert.ok(collect(dir).some(p=>p.endsWith('/'+name)));
 });
