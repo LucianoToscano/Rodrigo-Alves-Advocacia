@@ -68,3 +68,9 @@ test('proteção anterior do portal não é substituída',()=>{
  assert.match(toml,/function = "portal-guard"/);
  assert.match(toml,/publish = "site"/);
 });
+
+test('a central solidária não usa chamadas comerciais destacadas',()=>{
+ assert.doesNotMatch(page,/class="btn btn-gold header-btn"/);
+ assert.doesNotMatch(page,/class="whats-float"/);
+ assert.match(page,/href="\.\.\/contato\.html"/);
+});
