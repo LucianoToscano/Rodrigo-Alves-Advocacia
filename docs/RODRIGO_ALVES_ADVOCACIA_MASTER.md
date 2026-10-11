@@ -81,3 +81,13 @@ A pasta compartilha acesso de Comentador por link; verificar autorização de ac
 
 ### Revisão final de procedência e fotos WebP aprovadas
 As imagens de vídeo de 2025 com a identificação visual de outro perfil (alvesdiasadvogados) foram separadas em https://drive.google.com/drive/folders/1b0m1Dyg6qhLQ0O_yfVUbGHz9DJmAsEfb . Sua titularidade deve ser confirmada por Rodrigo ANTES de considerá-las referência facial. O total da pasta 07 é: 17 imagens selecionadas por uso (10 naturais históricas, 4 óculos/perfil, 3 EDITORIAIS SOMENTE ESTILO) e três fotografias WebP institucionais aprovadas do site V3.3, que estão agora disponíveis diretamente em https://drive.google.com/drive/folders/1Af0mtqOJOi2aB9WBA4Lv5EC9G9qf190H (arquivos, MIME e tamanho preservados). Painel visual das 17 selecionadas: https://drive.google.com/file/d/1Nc5W0SZiOQQ4nBy5hmyHlfmMUSOuC_nF/view . A triagem de descartes guarda 42 itens (41 JPG e desktop.ini), nenhum excluído definitivamente. Sempre seguir o guia atualizado https://docs.google.com/document/d/1awl4cnyqQkGYayJBPPhvumm1XOtIFAhtAtbXEcsIW4w/edit e pedir ao advogado retratos naturais recentes validados antes de gerar uma imagem oficial.
+
+
+## 15. Rede de Apoio ao Cidadão e Solidariedade — V3.8 (10/10/2026)
+
+Nova proposta implementada **em branch de revisão**, não publicada: `site/apoio/index.html`. Duas jornadas públicas e gratuitas (preciso de ajuda / quero ajudar), oito roteiros de informação social, telefones de urgência, CRAS, INSS, SUS e diretório inicial de oito entidades com links institucionais diretos. Busca e filtros locais sem coleta de dados, impressão/PDF no navegador, sem cadastro ou processamento de doações. Links a partir da página inicial e da orientação educativa.
+
+**Regra permanente:** não usar a rede social/solidária para captação de clientes, intermediação de pagamentos, simulação de convênio, certificação ou endosso. Não liberar formulário de indicação ou painel administrativo sem backend seguro, governança e LGPD. Nenhuma modificação das fotos, selo institucional, segredo ou proteção Netlify. Preservar `noindex` e acesso restrito. A curadoria deve observar atualização periódica e revisão jurídica de normas de publicidade profissional.
+
+Guia específico obrigatório: `docs/REDE_APOIO_CIDADANIA_SOLIDARIEDADE_20261010.md`. Pendentes: testes completos em Node/navegadores, auditoria OAB e liberação controlada do portal conforme `docs/PLANO_LIBERACAO_SOMENTE_SENHA_20261010.md`. O apoio social não depende de contratar serviços do escritório.
+
