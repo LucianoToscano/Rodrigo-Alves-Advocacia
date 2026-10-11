@@ -44,7 +44,7 @@ test('speech synthesis requires click and offers cancel and unsupported browser 
  assert.match(js,/read\?\.addEventListener\('click'/);assert.match(js,/read\.disabled=true/);
 });
 test('each page offers persistent accessibility entry and styles in correct relative location',()=>{
- assert.equal(pages().length,39);
+ assert.equal(pages().length,40);
  for(const p of pages()){
   const depth=path.relative(site,p).split(path.sep).length-1;
   const rel='../'.repeat(depth);const s=fs.readFileSync(p,'utf8');
