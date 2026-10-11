@@ -122,3 +122,17 @@ Nota: Netlify Forms segue desligado por decisão de segurança da V3.5; evitar r
 - [x] **DOC-007** [P0] Preparar runbook detalhado de liberação e reversão — `docs/PLANO_LIBERACAO_SOMENTE_SENHA_20261010.md`, **nenhuma desproteção executada**.
 
 **Estado operacional: NO-GO para remover SSO.** `main` ainda tem deploy antigo sem guard. Não considerar um teste em preview como autorização para tornar todos os permalinks públicos.
+
+
+## Complemento V3.8 — Apoio ao Cidadão e Solidariedade
+
+- [x] **SOCIAL-001** [P1] Criar versão em código da Rede de Apoio, com jornadas “Preciso de ajuda”/“Quero ajudar” e oito roteiros (branch, **não publicada**).
+- [x] **SOCIAL-002** [P1] Criar diretório editorial inicial com oito organizações e páginas institucionais diretas; sem PIX, arrecadação ou intermediação (branch).
+- [x] **SOCIAL-003** [P1] Adicionar links na página inicial e orientação; incluir filtros locais e impressão/PDF sem coleta (branch).
+- [ ] **SOCIAL-004** [P0] Validar em Node, navegador mobile/desktop, teclado, contraste e sem JavaScript.
+- [ ] **SOCIAL-005** [P0] Revisar legalmente direitos sociais, normas OAB, avisos, URLs, campanhas e instituições antes da publicação.
+- [ ] **SOCIAL-006** [P1] Criar curadoria de organizações locais de Natal/RN com fontes públicas e responsável editorial identificado.
+- [ ] **SOCIAL-007** [P2] Estudar fluxo seguro de sugestões/correções e administração de catálogo, sem formulário fictício.
+- [ ] **SOCIAL-008** [P1] Instituir revisão trimestral de domínios, critérios, campanhas e dados de contato.
+- [ ] **SOCIAL-009** [P0] Confirmar proteção de produção/previews e permalinks antigos antes de eventual liberação da central.
+

@@ -16,3 +16,9 @@ As aprovações institucionais foram relatadas pelo usuário; não são assinatu
 | 2026-10-10 | SEC-003/004/005/006/007 aprovadas **para estudo**, não para implantação direta | Requer segurança, LGPD e decisão específica sobre backend e operações | SEC-003/004/005/006/007 |
 
 **Nota complementar:** `TASK-003` era uma demanda derivada do equívoco sobre controles de prompts; retirada do backlog ativo e ID reservado no histórico. A acessibilidade geral do website permanece coberta por auditorias de UX/QA, independente dessa interface.
+
+
+## Decisão adicional — 10/10/2026
+
+**Rede de Apoio e Solidariedade como módulo público gratuito e autônomo (SOCIAL-001–009):** criar no site existente uma central para orientar cidadãos vulneráveis e divulgar links oficiais de instituições sociais; nunca condicionar ajuda à contratação, intermediar doações nem alegar vínculo institucional sem autorização. Quaisquer dados sensíveis, painel de administração, formulários, sistemas de doação e localização automática ficam fora do MVP; precisam de análise jurídica, técnica e LGPD própria. Preservar retratos, marca e segurança Netlify. Implementação em branch de revisão; nenhuma alteração em produção ou liberação de SSO. Ver manual V3.8.
+

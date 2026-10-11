@@ -490,3 +490,21 @@ Observação: DEP-004 Netlify Forms é legado do planejamento; decisão V3.5 vig
 | A11Y-004 | VLibras opcional carregado somente após ação | Em PR #7; **pendente de homologação de terceiros, privacidade, rede e revisão por usuário surdo** |
 | QA-002 | Testes regressivos de navegação e listas | 42/42 Node, 39 HTML, 2066 refs locais; não substituem navegador/leitor de tela |
 Relação entre os PRs: #2 base V3.3, #3 V3.5 autenticada, #6 V3.6, #7 V3.7. Não mexer em SSO/produção antes de homologação. Listas não são documentação obrigatória universal, nem ferramenta de decisão jurídica.
+
+
+## Demandas V3.8 — Rede de Apoio e Solidariedade (aditivas)
+
+| ID | Título | Prioridade | Status | Aprovação | Próxima ação |
+|---|---|---|---|---|---|
+| `SOCIAL-001` | Central de Apoio com orientações sociais | P1 | Código em branch, não homologado/publicado | Solicitada e aprovada na conversa de 10/10/2026 | Testar acessibilidade e revisar conteúdo |
+| `SOCIAL-002` | Diretório editorial de instituições e doações diretas | P1 | Código em branch; oito entidades iniciais | Solicitada e aprovada | Revisar URLs e adequação editorial |
+| `SOCIAL-003` | Links em homepage e orientação; filtro e impressão | P1 | Código em branch, não homologado | Aprovada | Homologação visual |
+| `SOCIAL-004` | QA completo (Node/browser/teclado/mobile) | P0 | Pendente | Aprovada | Testar e corrigir |
+| `SOCIAL-005` | Revisão jurídica/OAB e programas sociais | P0 | Pendente | Aprovada para revisão | Advogado validar fontes e texto |
+| `SOCIAL-006` | Curadoria territorial (Natal/RN e interior) | P1 | Planejada | Aprovada a ideia geral | Confirmar serviços municipais |
+| `SOCIAL-007` | Fluxo de indicação/gestão com aprovação | P2 | Estudo, não implementado | Ideia aprovada; requisitos não definidos | Definir backend e regras |
+| `SOCIAL-008` | Revisão trimestral da curadoria | P1 | Procedimento documentado, execução futura | Aprovada | Designar revisor |
+| `SOCIAL-009` | Gate de acesso antes de qualquer publicação | P0 | Pendente; Netlify não alterado | Diretriz permanente | Aplicar plano de proteção existente |
+
+A inclusão no diretório não representa certificação, parceria nem auditoria independente; nenhum sistema de pagamento, cadastro ou dados médicos foi criado. Manual: `docs/REDE_APOIO_CIDADANIA_SOLIDARIEDADE_20261010.md`.
+

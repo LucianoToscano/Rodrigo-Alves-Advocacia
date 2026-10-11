@@ -63,3 +63,14 @@ Criadas Netlify Edge Functions (guarda geral, login limitado, sessão HMAC) e JS
 - `site/ferramentas/organizar-documentos.html` de 3 para 7 temas; marcações em memória e impressão nativa/PDF, sem entrada de dados pessoais.
 - Ligações da orientação V3.6 aos checklists via código de assunto em URL. Testes tests/test-v37.mjs, 42/42 aprovados no conjunto.
 - Conservadas imagens, portal privado, SSO e branch main. PR #7 draft pendente de QA real, LGPD/OAB e homologação externa.
+
+
+## V3.8 — Rede de Apoio ao Cidadão e Solidariedade — 10/10/2026 (branch, não publicada)
+
+- Página `site/apoio/index.html`: oito orientações sociais (alimentação, INSS, saúde, renda, moradia, documentação/direitos, violência e apoio emocional); direções oficiais e contatos de emergência.
+- Diretório informativo com oito entidades (GRAACC, AMA, Hospital Pequeno Príncipe, ABRALE, Hospital de Amor, AACD, Ação da Cidadania, Fundação Abrinq) e links próprios sem recebimento de doações.
+- Novos `site/assets/css/apoio.css` e `site/assets/js/apoio.js`, responsividade, filtros locais e impressão/PDF, com apresentação funcional sem JavaScript.
+- Acesso na homepage e em `orientacao/index.html`, preservação de logomarca/fotos, Edge Functions, `noindex` e configuração Netlify.
+- `tests/test-apoio.mjs` e revisão dos contadores de páginas nos testes de regressão; execução de testes no Netlify/QA real ainda pendente.
+- Documentação `docs/REDE_APOIO_CIDADANIA_SOLIDARIEDADE_20261010.md`. Aprovação jurídica/editorial e publicação **não presumidas**.
+
