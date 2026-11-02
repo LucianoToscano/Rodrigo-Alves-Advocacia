@@ -20,3 +20,15 @@
 .ra-citizen-more {font-weight:700;color:#0c5758;text-decoration:underline;text-underline-offset:3px;}
 @media (max-width:760px){.ra-citizen-grid {grid-template-columns:1fr;}.ra-citizen-card {padding:21px;}}
 @media print { .ra-citizen {background:#fff!important;color:#111!important;} .ra-citizen-grid {grid-template-columns:1fr;} .ra-citizen-card {break-inside:avoid;box-shadow:none;border:1px solid #aaa;} .ra-citizen-card a {color:#111;} }
+
+
+/* Homepage: serviço público e alerta antifraude com baixo ruído visual. */
+.ra-citizen-home{padding:clamp(42px,6vw,75px) 0;background:#f4f0e7;color:#173238;border-top:1px solid #d5c9ae;}
+.ra-citizen-home h2{font-size:clamp(1.9rem,3.3vw,2.9rem);color:#112e32;max-width:830px;line-height:1.2;margin:10px 0 14px;}
+.ra-citizen-home p{font-size:1.03rem;line-height:1.72;max-width:800px;color:#344c50;}
+.ra-citizen-home-actions{display:flex;flex-wrap:wrap;gap:12px;margin:23px 0;}
+.ra-citizen-home-actions a{background:#173d41;color:#fff!important;padding:12px 19px;border-radius:7px;text-decoration:none;font-weight:700;min-height:48px;display:inline-flex;align-items:center;}
+.ra-citizen-home-actions a:hover,.ra-citizen-home-actions a:focus-visible{background:#285c61;outline:3px solid #af8a48;outline-offset:2px;}
+.ra-citizen-home-warning{border-left:4px solid #a7834a;background:#fffefa;padding:15px 19px;border-radius:0 8px 8px 0;}
+.ra-citizen-home-warning a{color:#0b5558;font-weight:700;text-decoration:underline;}
+@media print{.ra-citizen-home{background:white!important;}}
