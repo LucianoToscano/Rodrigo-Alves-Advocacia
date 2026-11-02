@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -45,4 +45,32 @@ test('correções editoriais não removem proteção por senha ou bloqueio de in
   const toml = readFileSync(resolve(site, '../netlify.toml'), 'utf8');
   assert.match(toml, /function\s*=\s*"portal-guard"/);
   assert.match(toml, /path\s*=\s*"\/\*"/);
+});
+
+test('todo FAQPage estruturado corresponde a perguntas e respostas visíveis na mesma página', () => {
+  const allHTML = dir => readdirSync(dir, { withFileTypes: true }).flatMap(entry =>
+    entry.isDirectory() ? allHTML(join(dir, entry.name)) : entry.name.endsWith('.html') ? [join(dir, entry.name)] : []);
+  const normalize = text => text.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&')
+    .replace(/&nbsp;/g, ' ').replace(/&quot;/g, '"').replace(/&#39;/g, "'")
+    .replace(/\s+/g, ' ').trim();
+  let checked = 0;
+  for (const file of allHTML(site)) {
+    const html = readFileSync(file, 'utf8');
+    const visible = new Map([...html.matchAll(/<details[^>]*>\s*<summary[^>]*>([\s\S]*?)<\/summary>\s*<p[^>]*>([\s\S]*?)<\/p>/g)]
+      .map(m => [normalize(m[1]), normalize(m[2])]));
+    for (const tag of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+      const schema = JSON.parse(tag[1]);
+      for (const element of schema['@graph'] || []) {
+        if (element['@type'] !== 'FAQPage') continue;
+        for (const question of element.mainEntity || []) {
+          const expected = normalize(question.acceptedAnswer?.text || '');
+          const actual = visible.get(question.name);
+          assert.ok(actual, `FAQ estruturada sem conteúdo visível: ${file} - ${question.name}`);
+          assert.equal(expected, actual, `FAQ estruturada diverge do conteúdo visível: ${file} - ${question.name}`);
+          checked++;
+        }
+      }
+    }
+  }
+  assert.equal(checked, 44, 'mudanças no número de questões FAQ devem ser revisadas');
 });
