@@ -41,3 +41,13 @@
 - SEO de abertura: manter noindex até aprovação formal; sitemap/canonicals e Rich Results apenas em preparação.
 
 Não confundir autorização técnica para continuar o desenvolvimento com comprovação externa de conformidade ou com aprovação jurídica.
+
+## Resultado comprovado da execução de 02/11/2026
+
+- PR #18 incorporada à `main` no commit `1c8a38fc7811566afd62d18bfa77e1a27e44f1e8` (subsequente atualização documental na `main`).
+- Prévia Netlify #18: `https://deploy-preview-18--rodrigo-alves-advocacia.netlify.app` — estado `ready`, Edge Functions presentes, sem alertas do scanner de segredos do deploy.
+- Reprodução local após integração das PRs #16, #17 e #18: `node --experimental-strip-types --test tests/*.mjs` — 74 testes, 74 aprovados, nenhuma falha.
+- Verificação estática: 39 páginas; 0 recursos locais faltantes, 0 fragmentos sem destino, 0 imagens sem `alt`, 0 páginas com cardinalidade incorreta de `h1`.
+- Limitação: navegador Chromium instalado bloqueou solicitações em ambiente isolado (`net::ERR_BLOCKED_BY_ADMINISTRATOR`); não há evidências de testes visuais/teclado efetivos.
+- O deploy ativo principal na Netlify continuava `6acaaed846e0a138a2c6a761` (antigo), **não** o commit de merge; a publicação principal permanece operacionalmente pendente de disparo autorizado no painel e verificação pós-deploy. Não desativar senha, noindex nem proteção Edge.
+- Pendências humanas continuam: aprovação jurídica, LGPD real, autorização de fotos e meios de pagamento, testes de leitor de tela, autenticação e fluxo de contato em produção protegida.
