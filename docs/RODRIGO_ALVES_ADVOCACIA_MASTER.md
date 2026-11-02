@@ -90,3 +90,12 @@ Em 02/11/2026 foi aberta a branch de revisão `fix/auditoria-conteudo-20261102` 
 
 ### Situação pós-merge — 02/11/2026
 Em 02/11/2026 a PR #13 foi mesclada na `main`, commit `13e37312c158c0d7db00de5231d1ab197a7b02c7`. A anotação imediatamente anterior era o plano de aprovação ANTES do merge e não representa mais o estado do GitHub. **Permanece pendente** aprovação jurídica e de privacidade pelo escritório, auditoria funcional real e homologação de produção; a mesclagem no GitHub não prova publicação na Netlify. Ajustes corretivos de coerência editorial e limpeza de 17 divergências no JSON-LD das FAQs estão em PR de revisão separada. Ver `docs/STATUS_POS_MERGE_20261102.md`.
+
+
+## Execução autorizada — 02/11/2026 (apoio ao cidadão)
+
+- **Código aprovado para integração técnica pelo responsável:** PR #17 (segurança Base64URL de sessão/CSRF) e PR #16 (contradições editoriais e FAQPage) mescladas na `main`; commit `d944ac28c2e63bad29b60ad1584adaa6888ac6fa`. Isso não é validação ética-jurídica do escritório nem prova de deploy da Netlify.
+- **Nova implementação nesta etapa:** oito caminhos oficiais na Central de Apoio ao Cidadão, glossário popular com 12 termos e filtro no navegador, destaque de prevenção a golpes na página inicial, explicação de serviços externos na política de privacidade, melhoria de impressão A4 e testes de regressão. Mantidas as 39 páginas e a marca/fotos intactas.
+- **Fontes e critérios de publicação:** consultar `docs/AMPLIACAO_CIDADAO_PUBLICACAO_20261102.md` e `docs/STATUS_POS_MERGE_20261102.md`. Distinguir o código `main` e o deploy efetivamente publicado no painel; não declarar atualização em produção até conferir SHA e fluxo de autenticação.
+- **Pendências sujeitas a validação humana:** interpretação jurídica e publicidade OAB, dados cadastrais do profissional, política de pagamentos, LGPD operacional, testes reais de acessibilidade, fotografias, links e fontes com manutenção; não afirmar conclusão sem comprovantes.
+- **Não negociar:** manter o portal protegido por Edge Function, manter `noindex` até liberação formal e conservar o projeto de selos em diretório institucional separado. Não coletar CPF, arquivos médicos, senhas gov.br ou documentos por formulários novos.
