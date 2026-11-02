@@ -99,3 +99,15 @@ Em 02/11/2026 a PR #13 foi mesclada na `main`, commit `13e37312c158c0d7db00de523
 - **Fontes e critérios de publicação:** consultar `docs/AMPLIACAO_CIDADAO_PUBLICACAO_20261102.md` e `docs/STATUS_POS_MERGE_20261102.md`. Distinguir o código `main` e o deploy efetivamente publicado no painel; não declarar atualização em produção até conferir SHA e fluxo de autenticação.
 - **Pendências sujeitas a validação humana:** interpretação jurídica e publicidade OAB, dados cadastrais do profissional, política de pagamentos, LGPD operacional, testes reais de acessibilidade, fotografias, links e fontes com manutenção; não afirmar conclusão sem comprovantes.
 - **Não negociar:** manter o portal protegido por Edge Function, manter `noindex` até liberação formal e conservar o projeto de selos em diretório institucional separado. Não coletar CPF, arquivos médicos, senhas gov.br ou documentos por formulários novos.
+
+### Encerramento técnico da ampliação — 02/11/2026
+
+**Autorização do responsável pelo projeto:** integrar e publicar correções e evoluções. Foram mescladas na `main` as PRs #17 (segurança; merge `388d0a57b4ced522a8dbeb3284639b2217573c41`), #16 (FAQ, acervo e JSON-LD; merge `d944ac28c2e63bad29b60ad1584adaa6888ac6fa`) e #18 (Centro de Apoio, glossário, homepage, privacidade, CSS para impressão; merge `1c8a38fc7811566afd62d18bfa77e1a27e44f1e8`).
+
+**Testes em cópia integrada do código da main pós-merge:** 74 testes Node aprovados, 0 falhas; 39 páginas verificadas, sem URLs internas inexistentes, âncoras quebradas, imagens sem atributo alt ou páginas com número de H1 diferente de um. Deploy Preview #18 da Netlify alcançou estado `ready` e indicou Edge Functions presentes, porém **isso não comprova autenticação ponta a ponta**.
+
+**Publicação principal ainda NÃO confirmada:** consulta ao painel conectado retornou deploy publicado ID `6acaaed846e0a138a2c6a761`, de outubro, e não o commit `1c8a38fc...`; não se deve declarar o site de produção atualizado até um novo deploy mostrar o SHA atualizado. Os conectores disponibilizados nesta sessão permitem consultar deploys, mas não possuem a ação de iniciar/prometer um deploy de produção. Há necessidade de disparo pelo painel Netlify `Deploys → Trigger deploy → Deploy site`, seguido de conferência do SHA e de testes de senha/Edge. Proibição de remover senha ou noindex permanece.
+
+**Testes não concluídos:** navegador gráfico bloqueado pelo ambiente de execução; acessibilidade NVDA/VoiceOver, responsividade real e autenticação Netlify com senha de teste não verificadas. Aprovação jurídica e LGPD operacionais dependem do Dr. Rodrigo e dos responsáveis. Nenhuma aprovação, conformidade ou implantação é presumida.
+
+**Relação de fontes e validações:** `docs/AMPLIACAO_CIDADAO_PUBLICACAO_20261102.md`. O programa institucional de selos continua independente; conteúdos, fotos e marca foram preservados.
