@@ -18,7 +18,7 @@
 
 **A-002 — Anos do acervo Instagram:** em `site/acervo/index.html`, o aviso dizia que as 12 postagens eram de 2025, embora haja 8 entradas de 2025 e 4 de 2026. Corrigir o aviso para “2025 e 2026” e adicionar teste derivado das datas presentes nos cards. Verificar título, autoria, data e autorização de cada postagem antes de publicação pública.
 
-## Pendências P0 antes de liberação pública
+**A-003 — Auditoria ampliada de FAQPage:** foram identificadas mais 17 divergências no JSON-LD do site: 14 perguntas BPC em 7 páginas sem FAQ visível correspondente e 3 respostas estruturadas diferentes da resposta exibida (em auxílio-acidente, perícia e BPC). A correção proposta removeu apenas os nós `FAQPage` órfãos, preservando `Attorney`/`LegalService` e os conteúdos visíveis, e alinhou as 3 respostas estruturadas ao HTML. Os 44 pares de perguntas e respostas ainda marcados ficam cobertos por teste automático. O Google informou em junho de 2026 que removeu a documentação de rich results de FAQ, após retirar o recurso da Busca; esta limpeza busca **consistência sem promessa de rich results**. Referência: https://developers.google.com/search/updates?hl=pt-BR.\n\n## Pendências P0 antes de liberação pública
 
 1. Preparar e verificar um deploy de **homologação** da `main` aprovada ou da PR corretiva. Não promover produção automaticamente.
 2. Validar de ponta a ponta senha, logout, expiração da sessão, cookies `HttpOnly/Secure/SameSite`, rate limiting, acesso direto a HTML/CSS/JS/JSON/imagens e comportamento de previews, sem credenciais reais em logs.
