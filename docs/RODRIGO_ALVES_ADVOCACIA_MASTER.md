@@ -81,3 +81,9 @@ A pasta compartilha acesso de Comentador por link; verificar autorização de ac
 
 ### Revisão final de procedência e fotos WebP aprovadas
 As imagens de vídeo de 2025 com a identificação visual de outro perfil (alvesdiasadvogados) foram separadas em https://drive.google.com/drive/folders/1b0m1Dyg6qhLQ0O_yfVUbGHz9DJmAsEfb . Sua titularidade deve ser confirmada por Rodrigo ANTES de considerá-las referência facial. O total da pasta 07 é: 17 imagens selecionadas por uso (10 naturais históricas, 4 óculos/perfil, 3 EDITORIAIS SOMENTE ESTILO) e três fotografias WebP institucionais aprovadas do site V3.3, que estão agora disponíveis diretamente em https://drive.google.com/drive/folders/1Af0mtqOJOi2aB9WBA4Lv5EC9G9qf190H (arquivos, MIME e tamanho preservados). Painel visual das 17 selecionadas: https://drive.google.com/file/d/1Nc5W0SZiOQQ4nBy5hmyHlfmMUSOuC_nF/view . A triagem de descartes guarda 42 itens (41 JPG e desktop.ini), nenhum excluído definitivamente. Sempre seguir o guia atualizado https://docs.google.com/document/d/1awl4cnyqQkGYayJBPPhvumm1XOtIFAhtAtbXEcsIW4w/edit e pedir ao advogado retratos naturais recentes validados antes de gerar uma imagem oficial.
+
+## Atualização editorial e jurídica — 02/11/2026
+
+Em 02/11/2026 foi aberta a branch de revisão `fix/auditoria-conteudo-20261102` para correções de textos, segurança, links, BPC, auxílio-acidente, perícia, planos de saúde e acervo Instagram. Documento técnico com fontes e pendências: [AUDITORIA_CORRECOES_EDITORIAIS_20261102.md](AUDITORIA_CORRECOES_EDITORIAIS_20261102.md).
+
+**Importante:** a mudança é proposta, não aprovação jurídica. Não confundir atualização editorial por IA com validação pelo advogado. Não publicar nem mesclar sem revisão ética (OAB), jurídica, LGPD, testes visuais e funcionais e conferência de dados do profissional. Produção Netlify não foi alterada por esta revisão.
