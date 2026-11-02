@@ -62,10 +62,35 @@ test('login cria cookie seguro por 12 horas e permite pagina e asset',async()=>{
  assert.equal((await gate.default(req('/assets/js/site.js',{headers:{cookie}}),ctx)).status,200);
  passed++;
 });
-test('adulteracao da assinatura nao concede acesso',async()=>{
- const {cookie}=await signedIn();const modified=cookie.slice(0,-1)+(cookie.endsWith('A')?'B':'A');
- const res=await gate.default(req('/areas/bpc-loas.html',{headers:{cookie:modified}}),ctx);
- assert.notEqual(await res.text(),'<p>conteudo privado</p>');passed++;
+test('adulteracao da assinatura nao concede acesso, inclusive Base64URL nao canonico',async()=>{
+ const {cookie}=await signedIn();
+ const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+ const last=cookie.at(-1);
+ const position=alphabet.indexOf(last);
+ // SHA-256 HMAC: ultima posicao do Base64URL sao 4 bits; os 2 bits finais sao zero.
+ assert.ok(position>=0 && position%4===0, 'assinatura deveria ser Base64URL canonico');
+ const alias=cookie.slice(0,-1)+alphabet[position+1];
+ assert.equal(await shared.validSession(alias,new URL(origin).host,43200),false);
+ const denied=await gate.default(req('/areas/bpc-loas.html',{headers:{cookie:alias}}),ctx);
+ assert.notEqual(await denied.text(),'<p>conteudo privado</p>');
+ // Uma mudanca em qualquer byte real da assinatura deve sempre ser recusada.
+ const parts=cookie.split('.');
+ const first=parts[2][0];
+ const changed=first==='A'?'B':'A';
+ const forged=cookie.replace('.'+parts[2],'.'+changed+parts[2].slice(1));
+ assert.equal(await shared.validSession(forged,new URL(origin).host,43200),false);
+ passed++;
+});
+test('csrf de login rejeita representacao Base64URL alternativa da assinatura',async()=>{
+ const host=new URL(origin).host;
+ const csrf=await shared.createLoginCsrf(host);
+ const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+ const position=alphabet.indexOf(csrf.at(-1));
+ assert.ok(position>=0 && position%4===0);
+ const alias=csrf.slice(0,-1)+alphabet[position+1];
+ const header=shared.CSRF_COOKIE_NAME+'='+alias;
+ assert.equal(await shared.validLoginCsrf(header,alias,host),false);
+ passed++;
 });
 test('sessao expirada negada e rotacao de segredo revoga acesso',async()=>{
  const {cookie}=await signedIn();

@@ -20,7 +20,10 @@ function b64url(bytes: Uint8Array): string {
 function fromB64url(str: string): Uint8Array {
   if (!/^[A-Za-z0-9_-]+$/.test(str) || str.length > 4096) throw new Error('invalid token encoding');
   const raw = atob(str.replace(/-/g, '+').replace(/_/g, '/') + '='.repeat((4 - str.length % 4) % 4));
-  return Uint8Array.from(raw, c => c.charCodeAt(0));
+  const bytes = Uint8Array.from(raw, c => c.charCodeAt(0));
+  // Reject non-canonical Base64URL aliases that decode to the same signature bytes.
+  if (b64url(bytes) !== str) throw new Error('non-canonical token encoding');
+  return bytes;
 }
 export function escapeHtml(value: string): string {
   return value.replace(/[&<>"']/g, s => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[s]!));
