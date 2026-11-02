@@ -87,3 +87,6 @@ As imagens de vídeo de 2025 com a identificação visual de outro perfil (alves
 Em 02/11/2026 foi aberta a branch de revisão `fix/auditoria-conteudo-20261102` para correções de textos, segurança, links, BPC, auxílio-acidente, perícia, planos de saúde e acervo Instagram. Documento técnico com fontes e pendências: [AUDITORIA_CORRECOES_EDITORIAIS_20261102.md](AUDITORIA_CORRECOES_EDITORIAIS_20261102.md).
 
 **Importante:** a mudança é proposta, não aprovação jurídica. Não confundir atualização editorial por IA com validação pelo advogado. Não publicar nem mesclar sem revisão ética (OAB), jurídica, LGPD, testes visuais e funcionais e conferência de dados do profissional. Produção Netlify não foi alterada por esta revisão.
+
+### Situação pós-merge — 02/11/2026
+Em 02/11/2026 a PR #13 foi mesclada na `main`, commit `13e37312c158c0d7db00de5231d1ab197a7b02c7`. A anotação imediatamente anterior era o plano de aprovação ANTES do merge e não representa mais o estado do GitHub. **Permanece pendente** aprovação jurídica e de privacidade pelo escritório, auditoria funcional real e homologação de produção; a mesclagem no GitHub não prova publicação na Netlify. Dois ajustes corretivos de coerência editorial estão em PR de revisão separada. Ver `docs/STATUS_POS_MERGE_20261102.md`.
