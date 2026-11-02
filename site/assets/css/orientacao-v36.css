@@ -12,3 +12,21 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .ra-guide-controls[hidden]{display:none!important}
+
+
+/* Glossário em linguagem simples */
+.ra-glossario h2{font-size:clamp(2rem,3.6vw,3rem);margin:8px 0 14px;color:#162e32;}
+.ra-glossario p{color:#34474a;max-width:780px;line-height:1.7;}
+.ra-glossario label{display:block;font-weight:700;margin:18px 0 8px;color:#1c3438;}
+.ra-glossario input[type=search]{display:block;width:min(100%,680px);min-height:50px;padding:12px 15px;border:2px solid #657774;border-radius:7px;background:#fff;color:#153336;font-size:1rem;}
+.ra-glossario input[type=search]:focus-visible{outline:3px solid #b99757;outline-offset:3px;}
+.ra-glossario-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin:20px 0 22px;}
+.ra-glossario-list>div{padding:22px;border:1px solid #cbd7d4;background:#fff;border-radius:10px;break-inside:avoid;min-width:0;}
+.ra-glossario-list>div[hidden]{display:none!important;}
+.ra-glossario-list dt{font-size:1.2rem;font-weight:750;color:#153436;margin:0 0 9px;}
+.ra-glossario-list dd{margin:0;font-size:1rem;line-height:1.65;color:#31494b;}
+.ra-glossario-list a{color:#14595b;text-decoration:underline;text-underline-offset:3px;font-weight:700;}
+.ra-glossario-list a:focus-visible{outline:3px solid #b99757;outline-offset:3px;}
+.ra-glossario-small{font-size:.86rem;}
+@media(max-width:740px){.ra-glossario-list{grid-template-columns:1fr}.ra-glossario-list>div{padding:18px;}}
+@media print{.ra-glossario input,.ra-glossario label{display:none!important;}.ra-glossario-list{display:block;}.ra-glossario-list>div,.ra-glossario-list>div[hidden]{display:block!important;margin-bottom:10px;}.ra-glossario{background:white!important;color:#111!important;}}
