@@ -1,5 +1,7 @@
 # Auditoria e correções editoriais — 02/11/2026
 
+> **Registro de atualização — 02/11/2026 (pós-merge):** as referências abaixo a PR em rascunho, não mesclar e testes não executados descrevem o estado *na data de redação do relatório original*, antes da ação posterior. A PR #13 foi mesclada na `main` em 02/11/2026, com commit `13e37312c158c0d7db00de5231d1ab197a7b02c7`, por autorização do responsável pelo projeto. Essa mesclagem não equivale a aprovação jurídica ou publicação na Netlify. Os testes Node do snapshot passaram (63/63), sem testes funcionais reais de autenticação no ambiente publicado. Duas inconsistências encontradas após o merge foram propostas para correção em uma PR separada: FAQ estruturada/visível sobre auxílio-acidente e intervalo de anos do acervo Instagram. Consultar `STATUS_POS_MERGE_20261102.md`.
+
 **Projeto:** Rodrigo Alves | Advocacia  
 **Repositório:** LucianoToscano/rodrigo-alves-advocacia  
 **Branch:** `fix/auditoria-conteudo-20261102`  
